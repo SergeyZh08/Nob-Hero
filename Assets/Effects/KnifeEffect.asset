@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37815ab4ef3174f1884d136f17159b0f, type: 3}
+  m_Name: KnifeEffect
+  m_EditorClassIdentifier: Assembly-CSharp::KnifeEffect
+  Name: Knife
+  Description: Knife Effect
+  Sprite: {fileID: 21300000, guid: 5a5fa30f5186b446e8b4562a4401651c, type: 3}
+  Level: 0
+  _level:
+  - Cooldown: 1
+    Damage: 2
+    Radius: 0
+    Number: 12
+    DPS: 0
+    PassCount: 30
+    LifeTime: 0
+    Speed: 180
+  - Cooldown: 3
+    Damage: 2.5
+    Radius: 0
+    Number: 9
+    DPS: 0
+    PassCount: 8
+    LifeTime: 0
+    Speed: 270
+  - Cooldown: 0
+    Damage: 0
+    Radius: 0
+    Number: 0
+    DPS: 0
+    PassCount: 0
+    LifeTime: 0
+    Speed: 0
+  - Cooldown: 0
+    Damage: 0
+    Radius: 0
+    Number: 0
+    DPS: 0
+    PassCount: 0
+    LifeTime: 0
+    Speed: 0
+  - Cooldown: 0
+    Damage: 0
+    Radius: 0
+    Number: 0
+    DPS: 0
+    PassCount: 0
+    LifeTime: 0
+    Speed: 0
+  - Cooldown: 0
+    Damage: 0
+    Radius: 0
+    Number: 0
+    DPS: 0
+    PassCount: 0
+    LifeTime: 0
+    Speed: 0
+  - Cooldown: 0
+    Damage: 0
+    Radius: 0
+    Number: 0
+    DPS: 0
+    PassCount: 0
+    LifeTime: 0
+    Speed: 0
+  - Cooldown: 0
+    Damage: 0
+    Radius: 0
+    Number: 0
+    DPS: 0
+    PassCount: 0
+    LifeTime: 0
+    Speed: 0
+  - Cooldown: 0
+    Damage: 0
+    Radius: 0
+    Number: 0
+    DPS: 0
+    PassCount: 0
+    LifeTime: 0
+    Speed: 0
+  - Cooldown: 0
+    Damage: 0
+    Radius: 0
+    Number: 0
+    DPS: 0
+    PassCount: 0
+    LifeTime: 0
+    Speed: 0
+  _knifePrefab: {fileID: 7167914001272121078, guid: 947597283ca094a6c89a964e763f87a4, type: 3}

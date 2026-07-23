@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03251f72e3d24b95aaf4c4f78bbcdd3, type: 3}
+  m_Name: PassCountEffect
+  m_EditorClassIdentifier: Assembly-CSharp::PassCountEffect
+  Name: Pass Count
+  Description: Pass Count Effect
+  Sprite: {fileID: 21300000, guid: b98be39cc118944d5a696bf57301d66d, type: 3}
+  Level: 0
+  _boost: 01000000010000000100000001000000010000000100000001000000010000000100000001000000

@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46ffc9ab5d0ce4b3aa09c62abddbdd1c, type: 3}
+  m_Name: MagicMisslesEffect
+  m_EditorClassIdentifier: Assembly-CSharp::MagicMisslesEffect
+  Name: Magic Missles
+  Description: Magic Missles Effect
+  Sprite: {fileID: 21300000, guid: 59193ffbd295c4ff2a2c825211599000, type: 3}
+  Level: 0
+  _level:
+  - Cooldown: 3
+    Damage: 10
+    Radius: 0
+    Number: 1
+    DPS: 0
+    PassCount: 0
+    LifeTime: 0
+    Speed: 10
+  - Cooldown: 3
+    Damage: 10
+    Radius: 0
+    Number: 2
+    DPS: 0
+    PassCount: 0
+    LifeTime: 0
+    Speed: 10
+  - Cooldown: 0
+    Damage: 0
+    Radius: 0
+    Number: 0
+    DPS: 0
+    PassCount: 0
+    LifeTime: 0
+    Speed: 0
+  - Cooldown: 0
+    Damage: 0
+    Radius: 0
+    Number: 0
+    DPS: 0
+    PassCount: 0
+    LifeTime: 0
+    Speed: 0
+  - Cooldown: 0
+    Damage: 0
+    Radius: 0
+    Number: 0
+    DPS: 0
+    PassCount: 0
+    LifeTime: 0
+    Speed: 0
+  - Cooldown: 0
+    Damage: 0
+    Radius: 0
+    Number: 0
+    DPS: 0
+    PassCount: 0
+    LifeTime: 0
+    Speed: 0
+  - Cooldown: 0
+    Damage: 0
+    Radius: 0
+    Number: 0
+    DPS: 0
+    PassCount: 0
+    LifeTime: 0
+    Speed: 0
+  - Cooldown: 0
+    Damage: 0
+    Radius: 0
+    Number: 0
+    DPS: 0
+    PassCount: 0
+    LifeTime: 0
+    Speed: 0
+  - Cooldown: 0
+    Damage: 0
+    Radius: 0
+    Number: 0
+    DPS: 0
+    PassCount: 0
+    LifeTime: 0
+    Speed: 0
+  - Cooldown: 0
+    Damage: 0
+    Radius: 0
+    Number: 0
+    DPS: 0
+    PassCount: 0
+    LifeTime: 0
+    Speed: 0
+  _magicMisslesPrefab: {fileID: 169985662343035489, guid: 6246d74c8190d465f909366bc9148823, type: 3}
