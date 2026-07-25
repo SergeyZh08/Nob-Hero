@@ -5,6 +5,7 @@ public class ActionState : GameState
     [SerializeField] private Joystick _joystick;
     [SerializeField] private Player _player;
     [SerializeField] private EnemySpawner _enemySpawner;
+    [SerializeField] private LevelupManager _levelupManager;
 
     public override void Init(GameStateManager gameStateManager)
     {
@@ -15,7 +16,7 @@ public class ActionState : GameState
     {
         base.EnterFirstTime();
         _enemySpawner.NextWave(0);
-        _player.Experience.UpdateNextLevelValue(0);
+        _levelupManager.StartLeveling();
     }
 
     public override void Enter()

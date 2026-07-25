@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1492676362443232252}
   - component: {fileID: 9150389210964080524}
   - component: {fileID: 64881965670658270}
+  - component: {fileID: 6813118380905733490}
   m_Layer: 7
   m_Name: ExperienceLoot
   m_TagString: Untagged
@@ -69,6 +70,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ExperienceLoot
   _collider: {fileID: 9150389210964080524}
   _experienceCount: 1
+--- !u!114 &6813118380905733490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430368013545968758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a66971fc74391418e991d9b89c6c9f4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Rotation
+  _rotationVector: {x: 0, y: 180, z: 0}
 --- !u!1 &5724950774770989776
 GameObject:
   m_ObjectHideFlags: 0
@@ -97,7 +111,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.3666941, w: 0.9303416}
   m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 0.31970653, y: 0.15299891, z: 0.25354978}
+  m_LocalScale: {x: 0.2, y: 0.125, z: 0.17}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1492676362443232252}

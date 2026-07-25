@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1163526816442921097}
   - component: {fileID: 1185702274302182001}
   - component: {fileID: 636344318880742050}
+  - component: {fileID: -1504009098689014082}
   m_Layer: 7
   m_Name: CoinLoot
   m_TagString: Untagged
@@ -68,7 +69,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinLoot
   _collider: {fileID: 1185702274302182001}
-  _cointCount: 1
+  _coinCount: 10
+--- !u!114 &-1504009098689014082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4591261414482414339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a66971fc74391418e991d9b89c6c9f4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Rotation
+  _rotationVector: {x: 0, y: 180, z: 0}
 --- !u!1 &7661088574500803654
 GameObject:
   m_ObjectHideFlags: 0
