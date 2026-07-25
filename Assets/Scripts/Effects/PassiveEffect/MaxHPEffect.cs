@@ -7,7 +7,7 @@ public class MaxHPEffect : PassiveEffect
     public override void Activate()
     {
         base.Activate();
-        _player.MaxHPBoost += _boost[Level - 1];
-        _player.PlayerHealth.SetBoostHp();
+        _player.Stats.MaxHPBoost += _boost[Level - 1];
+        _player.Health.SetBoostHp();
     }
 }

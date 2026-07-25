@@ -10,32 +10,22 @@ public struct ExperienceData
     public int Level;
 }
 
-public class ExperienceManager : MonoBehaviour
+public class PlayerExperience : MonoBehaviour
 {
     public event Action<ExperienceData> OnExperienceAdded;
     public event Action<int> OnLevelUp;
-
-    [SerializeField] private Collector _collector;
     [SerializeField] private AnimationCurve _experienceLevelCurve;
+    public Player Player { get; private set; }
 
     private ExperienceData _experienceData;
 
-    public void Init()
+    public void Init(Player player)
     {
         _experienceData.ExperienceToNextLevel = _experienceLevelCurve.Evaluate(0);
+        Player = player;
     }
 
-    private void OnEnable()
-    {
-        _collector.OnExperienceTaken += AddExperience;
-    }
-
-    private void OnDisable()
-    {
-        _collector.OnExperienceTaken -= AddExperience;
-    }
-
-    private void AddExperience(int value)
+    public void AddExperience(int value)
     {
         _experienceData.Experience += value;
 

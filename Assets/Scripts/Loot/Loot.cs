@@ -14,7 +14,7 @@ public class Loot : MonoBehaviour, IPoolable
         OnTaken = action;
     }
 
-    public void Collect(Collector collector)
+    public void Collect(Player player)
     {
         if (_isCollected)
         {
@@ -29,17 +29,17 @@ public class Loot : MonoBehaviour, IPoolable
             StopCoroutine(_currentCoroutine);
         }
 
-        _currentCoroutine = StartCoroutine(CollectProcess(collector));
+        _currentCoroutine = StartCoroutine(CollectProcess(player));
     }
 
-    private IEnumerator CollectProcess(Collector collector)
+    private IEnumerator CollectProcess(Player player)
     {
         Vector3 a = transform.position;
         Vector3 b = a + Vector3.up * 2;
 
         for (float t = 0; t < 1; t += Time.deltaTime * 3)
         {
-            Vector3 d = collector.transform.position;
+            Vector3 d = player.transform.position;
             Vector3 c = d + Vector3.up * 2;
 
             transform.position = Bezier.GetPoint(a, b, c, d, t);
@@ -47,10 +47,10 @@ public class Loot : MonoBehaviour, IPoolable
             yield return null;
         }
 
-        Take(collector);
+        Take(player);
     }
 
-    protected virtual void Take(Collector collector)
+    protected virtual void Take(Player player)
     {
         OnTaken?.Invoke(this);
     }

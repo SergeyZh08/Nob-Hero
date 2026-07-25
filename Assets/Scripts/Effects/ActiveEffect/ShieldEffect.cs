@@ -12,7 +12,7 @@ public class ShieldEffect : ActiveEffect
         _shield = Instantiate(_shieldPrefab, _player.transform.position, Quaternion.identity);
         _shield.Deactivate();
 
-        _player.PlayerHealth.AddModifiers(_shield);
+        _player.Health.AddModifiers(_shield);
     }
 
     protected override void Produce()

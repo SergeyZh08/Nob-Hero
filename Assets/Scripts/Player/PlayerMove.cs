@@ -7,11 +7,16 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float _speed = 5f;
     [SerializeField] private Joystick _joystick;
     [SerializeField] private Rigidbody _rigidbody;
-    [SerializeField] private Player _player;
+    public Player Player { get; private set; }
     private bool _isRun  = false;
     private bool _oldState = false;
     
     private Vector2 _movement;
+
+    public void Init(Player player)
+    {
+        Player = player;
+    }
 
     private void Update()
     {
@@ -20,7 +25,7 @@ public class PlayerMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector3 speedVector = new Vector3(_movement.x, 0, _movement.y) * _speed * (1 + _player.MovementSpeed); 
+        Vector3 speedVector = new Vector3(_movement.x, 0, _movement.y) * _speed * (1 + Player.Stats.MovementSpeed); 
         _rigidbody.linearVelocity = speedVector;
 
         if (_rigidbody.linearVelocity != Vector3.zero)

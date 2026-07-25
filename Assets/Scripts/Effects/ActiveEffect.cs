@@ -36,9 +36,9 @@ public class ActiveEffect : Effect
         
     }
 
-    protected float ApplyDamageBoost(float value) => value * (1 + _player.DamageBoost);
-    protected float ApplyRadiusBoost(float value) => value * (1 + _player.RadiusBoost);
-    protected float ApplyCooldownBoost(float value) => value * (1 - _player.CooldownBoost);
-    protected int ApplyNumberBoost(int value) => value + _player.NumberBoost;
-    protected int ApplyPassCountBoost(int value) => value + _player.PassCountBoost;
+    protected float ApplyDamageBoost(float value) => value * (1 + _player.Stats.DamageBoost);
+    protected float ApplyRadiusBoost(float value) => value * (1 + _player.Stats.RadiusBoost);
+    protected float ApplyCooldownBoost(float value) => value * (1 - _player.Stats.CooldownBoost);
+    protected int ApplyNumberBoost(int value) => value + _player.Stats.NumberBoost;
+    protected int ApplyPassCountBoost(int value) => value + _player.Stats.PassCountBoost;
 }

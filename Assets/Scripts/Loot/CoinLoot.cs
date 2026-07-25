@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class CoinLoot : Loot
 {
-    [SerializeField] private int _cointCount = 10;
-    protected override void Take(Collector collector)
+    [SerializeField] private int _coinCount = 10;
+    protected override void Take(Player player)
     {
-        base.Take(collector);
-        collector.TakeCoin(_cointCount);
+        base.Take(player);
+        player.Inventory.AddCoin(_coinCount);
     }
 
 }

@@ -7,6 +7,6 @@ public class MagnetEffect : PassiveEffect
     public override void Activate()
     {
         base.Activate();
-        _player.MagnetBoost += _boost[Level - 1];
+        _player.Stats.MagnetBoost += _boost[Level - 1];
     }
 }

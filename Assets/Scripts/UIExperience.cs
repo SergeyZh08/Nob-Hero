@@ -4,20 +4,20 @@ using UnityEngine.UI;
 
 public class UIExperience : MonoBehaviour
 {
-    [SerializeField] private ExperienceManager _experienceManager;
+    [SerializeField] private Player _player;
     [SerializeField] private TextMeshProUGUI _level;
     [SerializeField] private Image _experienceAmount;
 
     private void OnEnable()
     {
-        _experienceManager.OnExperienceAdded += UpdateExperience;
-        _experienceManager.OnLevelUp += UpdateLevel;
+        _player.Experience.OnExperienceAdded += UpdateExperience;
+        _player.Experience.OnLevelUp += UpdateLevel;
     }
 
     private void OnDisable()
     {
-        _experienceManager.OnExperienceAdded -= UpdateExperience;
-        _experienceManager.OnLevelUp -= UpdateLevel;
+        _player.Experience.OnExperienceAdded -= UpdateExperience;
+        _player.Experience.OnLevelUp -= UpdateLevel;
     }
 
     private void UpdateExperience(ExperienceData data)

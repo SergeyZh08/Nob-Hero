@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class Bomb : MonoBehaviour, IPoolable
@@ -11,6 +12,9 @@ public class Bomb : MonoBehaviour, IPoolable
     private bool _isActivated = false;
     private float _timer = 0;
     private Action<Bomb> _release;
+    // переделать под общую систему
+    [SerializeField] private ParticleSystem _explosion;
+    [SerializeField] private GameObject[] _visual;
 
     public void Init(float radius, float damage, float lifeTime, Action<Bomb> action)
     {
@@ -22,6 +26,11 @@ public class Bomb : MonoBehaviour, IPoolable
 
     private void Update()
     {
+        if (_isActivated)
+        {
+            return;
+        }
+
         _timer += Time.deltaTime;
 
         if (_timer >= _lifeTime)
@@ -41,7 +50,7 @@ public class Bomb : MonoBehaviour, IPoolable
         {
             _isActivated = true;
 
-            int len = Physics.OverlapSphereNonAlloc(transform.position, _radius, _enemies, _layerMask);
+            int len = Physics.OverlapSphereNonAlloc(transform.position, _radius, _enemies, _layerMask, QueryTriggerInteraction.Ignore);
 
             for (int i = 0; i < len; i++)
             {
@@ -51,8 +60,30 @@ public class Bomb : MonoBehaviour, IPoolable
                 }
             }
 
-            Die();
+            // переделать под общую систему
+            StartCoroutine(DieProcess());
         }
+    }
+
+    // переделать под общую систему
+    private IEnumerator DieProcess()
+    {
+        ParticleSystem system = Instantiate(_explosion, transform.position, Quaternion.identity);
+        system.Play();
+
+        for (int i = 0; i < _visual.Length; i++)
+        {
+            _visual[i].gameObject.SetActive(false);
+        }
+
+        yield return new WaitForSeconds(_explosion.main.duration);
+
+        for (int i = 0; i < _visual.Length; i++)
+        {
+            _visual[i].gameObject.SetActive(true);
+        }
+
+        Die();
     }
 
     private void Die()

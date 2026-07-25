@@ -6,14 +6,12 @@ public class Collector : MonoBehaviour
 {
     [SerializeField] private float _radiusForScan;
     [SerializeField] private LayerMask _lootMask;
-    [SerializeField] private Player _player;
+    public Player Player { get; private set; }
     private readonly Collider[] _colliders = new Collider[16];
-    public event Action<int> OnExperienceTaken;
-    public event Action<int> OnHealthTaken;
-    public event Action<int> OnCoinTaken;
 
-    private void Start()
+    public void Init(Player player)
     {
+        Player = player;
         StartCoroutine(ScanRoutine());
     }
 
@@ -30,7 +28,7 @@ public class Collector : MonoBehaviour
 
     private void ScanArea()
     {
-        float radius = _radiusForScan + (1 * _player.RadiusBoost);
+        float radius = _radiusForScan + (1 * Player.Stats.RadiusBoost);
 
         int count = Physics.OverlapSphereNonAlloc(transform.position, radius, _colliders, _lootMask, QueryTriggerInteraction.Ignore);
 
@@ -38,29 +36,14 @@ public class Collector : MonoBehaviour
         {
             if (_colliders[i].TryGetComponent(out Loot loot))
             {
-                loot.Collect(this);
+                loot.Collect(Player);
             }
         }
     }
 
-    public void TakeExperience(int value)
-    {
-        OnExperienceTaken?.Invoke(value);
-    }
-
-    public void TakeHealth(int value)
-    {
-        OnHealthTaken?.Invoke(value);
-    }
-
-    public void TakeCoin(int value)
-    {
-        OnCoinTaken?.Invoke(value);
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawWireSphere(transform.position, _radiusForScan);
-        Gizmos.DrawWireSphere(transform.position, _radiusForScan + (1 * _player.RadiusBoost));
-    }
+    // private void OnDrawGizmos()
+    // {
+    //     Gizmos.DrawWireSphere(transform.position, _radiusForScan);
+    //     Gizmos.DrawWireSphere(transform.position, _radiusForScan + (1 * Player.Stats.RadiusBoost));
+    // }
 }

@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 [CreateAssetMenu (fileName = nameof(BombEffect), menuName = ("ContinuousEffect/" + nameof(BombEffect)))]

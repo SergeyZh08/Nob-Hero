@@ -1,8 +1,14 @@
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class PlayerStats : MonoBehaviour
 {
-    [field: SerializeField] public PlayerHealth PlayerHealth { get; private set;}
+    public Player Player { get; private set; }
+
+    public void Init(Player player)
+    {
+        Player = player;
+    }
+    
     public float CooldownBoost;
     public float DamageBoost;
     public float RadiusBoost;

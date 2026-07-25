@@ -12,7 +12,7 @@ public struct PlayerHealthData
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private PlayerHealthData _playerHealthData;
-    [SerializeField] private Player _player;
+    public Player Player { get; private set; }
     public event Action<PlayerHealthData> OnHealthChanged;
     public event Action OnPlayerDie;
     private float _timeForRegeneration = 1f;
@@ -20,8 +20,10 @@ public class PlayerHealth : MonoBehaviour
     private float _startMaxHp;
     private List<IPlayerHealthModifier> _healthModifiers = new List<IPlayerHealthModifier>();
 
-    private void Start()
+    public void Init(Player player)
     {
+        Player = player;
+
         SetHealth(_playerHealthData.Health);
         _startMaxHp = _playerHealthData.MaxHealth;
     }
@@ -55,11 +57,19 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    public void AddHealth(float value)
+    {
+        float newHealth = _playerHealthData.Health + value;
+        newHealth = Mathf.Min(newHealth, _playerHealthData.MaxHealth);
+
+        SetHealth(newHealth);
+    }
+
     private void Regeneration()
     {
         if (_playerHealthData.Health < _playerHealthData.MaxHealth)
         {
-            float newHealth = _playerHealthData.Health + _player.RegenerationBoost;
+            float newHealth = _playerHealthData.Health + Player.Stats.RegenerationBoost;
             newHealth = Mathf.Min(newHealth, _playerHealthData.MaxHealth);
             SetHealth(newHealth);
         }
@@ -73,7 +83,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void SetBoostHp()
     {
-        _playerHealthData.MaxHealth = _startMaxHp * (1 + _player.MaxHPBoost);
+        _playerHealthData.MaxHealth = _startMaxHp * (1 + Player.Stats.MaxHPBoost);
         OnHealthChanged?.Invoke(_playerHealthData);
     }
 

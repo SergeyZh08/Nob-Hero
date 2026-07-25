@@ -7,6 +7,6 @@ public class MovementSpeedEffect : PassiveEffect
     public override void Activate()
     {
         base.Activate();
-        _player.MovementSpeed += _boost[Level - 1];
+        _player.Stats.MovementSpeed += _boost[Level - 1];
     }
 }

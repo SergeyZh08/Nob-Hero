@@ -2,18 +2,19 @@ using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
 {
-    [SerializeField] private PlayerMove _playerMove;
+    public Player Player { get; private set; }
     [SerializeField] private Animator _animator;
     [SerializeField] private string _isRun = "IsRun";
 
-    private void OnEnable()
+    public void Init(Player player)
     {
-        _playerMove.OnRunStarting += SetWalkState;
+        Player = player;
+        Player.Move.OnRunStarting += SetWalkState;
     }
 
     private void OnDisable()
     {
-        _playerMove.OnRunStarting -= SetWalkState;
+        Player.Move.OnRunStarting -= SetWalkState;
     }
 
     private void SetWalkState(bool state)

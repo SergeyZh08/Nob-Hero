@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour, IPoolable
     [SerializeField] private float _distanceToCarry;
     public bool IsAlive => gameObject.activeInHierarchy;
     private float _timer;
-    private PlayerHealth _playerHealth;
+    private Player _player;
     private Transform _target;
     public event Action<Enemy> OnEnemyDie;
     public event Action<float> OnEnemyHit;
@@ -27,7 +27,7 @@ public class Enemy : MonoBehaviour, IPoolable
 
     private void Update()
     {
-        if (_playerHealth)
+        if (_player)
         {
             _timer += Time.deltaTime;
 
@@ -57,17 +57,17 @@ public class Enemy : MonoBehaviour, IPoolable
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.TryGetComponent(out PlayerHealth playerHealth))
+        if (other.gameObject.TryGetComponent(out Player player))
         {
-            _playerHealth = playerHealth;
+            _player = player;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.TryGetComponent(out PlayerHealth _))
+        if (other.gameObject.TryGetComponent(out Player player))
         {
-            _playerHealth = null;
+            _player = null;
         }
     }
 
@@ -90,7 +90,7 @@ public class Enemy : MonoBehaviour, IPoolable
 
     private void Attack()
     {
-        _playerHealth.TakeDamage(_dps * _attackPeriod);
+        _player.Health.TakeDamage(_dps * _attackPeriod);
     }
 
     public void OnGetFromPool()
@@ -101,7 +101,7 @@ public class Enemy : MonoBehaviour, IPoolable
 
     public void OnReleaseToPool()
     {
-        _playerHealth = null;
+        _player = null;
         _target = null;
         _rigidbody.linearVelocity = Vector3.zero;
         OnEnemyDie = null;
