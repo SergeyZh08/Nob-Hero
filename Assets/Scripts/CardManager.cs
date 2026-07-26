@@ -7,11 +7,13 @@ public class CardManager : MonoBehaviour
     [SerializeField] private Card[] _cards;
     private EffectManager _effectManager;
     private GameStateManager _gameStateManager;
+    private EnemySpawner _enemySpawner;
 
-    public void Init(EffectManager effectManager, GameStateManager gameStateManager)
+    public void Init(EffectManager effectManager, GameStateManager gameStateManager, EnemySpawner enemySpawner)
     {
         _effectManager = effectManager;
         _gameStateManager = gameStateManager;
+        _enemySpawner = enemySpawner;
 
         for (int i = 0; i < _cards.Length; i++)
         {
@@ -34,12 +36,13 @@ public class CardManager : MonoBehaviour
     private void SelectCard(Effect effect)
     {
         _effectManager.AddEffect(effect);
+        _enemySpawner.NextWave();
+        _gameStateManager.SetAction();
         HideCards();
     }
 
     public void HideCards()
     {
         _cardParent.SetActive(false);
-        _gameStateManager.SetAction();
     }
 }

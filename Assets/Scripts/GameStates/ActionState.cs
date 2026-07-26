@@ -4,7 +4,7 @@ public class ActionState : GameState
 {
     [SerializeField] private Joystick _joystick;
     [SerializeField] private Player _player;
-    [SerializeField] private EnemySpawner _enemySpawner;
+    
     [SerializeField] private LevelupManager _levelupManager;
 
     public override void Init(GameStateManager gameStateManager)
@@ -15,21 +15,20 @@ public class ActionState : GameState
     public override void EnterFirstTime()
     {
         base.EnterFirstTime();
-        _enemySpawner.NextWave(0);
         _levelupManager.StartLeveling();
     }
 
     public override void Enter()
     {
         base.Enter();
-        _joystick.Activate();
+        //_joystick.Activate();
         _player.Move.enabled = true;
     }
 
     public override void Exit()
     {
         base.Exit();
-        _joystick.Deactivate();
+        //_joystick.Deactivate();
         _player.Move.enabled = false;
     }
 }

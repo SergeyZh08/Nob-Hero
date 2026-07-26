@@ -293,6 +293,7 @@ MonoBehaviour:
   _enemySpawner: {fileID: 245043949}
   _topIconManager: {fileID: 1422881070}
   _levelupManager: {fileID: 1743408184}
+  _gameManager: {fileID: 1856063756}
 --- !u!4 &25430603
 Transform:
   m_ObjectHideFlags: 0
@@ -1460,7 +1461,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1310788489}
   m_Father: {fileID: 1451537262}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &520884158
@@ -4139,7 +4141,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 500661257}
     m_Modifications:
     - target: {fileID: 164739834809288514, guid: 0f04ca49ae490b743971cf31729b3364, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4217,6 +4219,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1310788492}
   m_SourcePrefab: {fileID: 100100000, guid: 0f04ca49ae490b743971cf31729b3364, type: 3}
+--- !u!4 &1310788489 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 164739834809288514, guid: 0f04ca49ae490b743971cf31729b3364, type: 3}
+  m_PrefabInstance: {fileID: 1310788488}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1310788490 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5962915625593066007, guid: 0f04ca49ae490b743971cf31729b3364, type: 3}
@@ -4588,7 +4595,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ActionState
   _joystick: {fileID: 1433102801}
   _player: {fileID: 1457118489}
-  _enemySpawner: {fileID: 245043949}
   _levelupManager: {fileID: 1743408184}
 --- !u!4 &1419110845
 Transform:
@@ -4850,6 +4856,7 @@ Transform:
   - {fileID: 1123223406}
   - {fileID: 1422881069}
   - {fileID: 1286636122}
+  - {fileID: 1856063757}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1457118481
@@ -6444,6 +6451,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1856063755
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1856063757}
+  - component: {fileID: 1856063756}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1856063756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856063755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d872aa2ef2e2740e8ad52c5ad6cfdb24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
+--- !u!4 &1856063757
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856063755}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1451537262}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1858928179
 GameObject:
   m_ObjectHideFlags: 0
@@ -7365,7 +7416,6 @@ SceneRoots:
   - {fileID: 923279044}
   - {fileID: 1463793735}
   - {fileID: 1457118483}
-  - {fileID: 1310788488}
   - {fileID: 1111185179}
   - {fileID: 1995445670}
   - {fileID: 245043950}

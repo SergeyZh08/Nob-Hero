@@ -6,6 +6,7 @@ public class WinState : GameState
     public override void Enter()
     {
         base.Enter();
+        Time.timeScale = 0f;
         _winWindow.Show();
     }
 }

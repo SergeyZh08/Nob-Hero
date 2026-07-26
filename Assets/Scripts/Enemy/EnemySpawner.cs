@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -19,19 +20,35 @@ public class EnemySpawner : MonoBehaviour
     private Dictionary<Enemy, Pool<Enemy>> _pools = new Dictionary<Enemy, Pool<Enemy>>();
     private Dictionary<Enemy, Pool<Enemy>> _enemyToPool = new Dictionary<Enemy, Pool<Enemy>>();
     private List<Enemy> _spawnedEnemies = new List<Enemy>();
+    public event Action AllEnemiesDie;
+    private bool _lastWave;
+    private int _currentWave;
 
     public void Init(LootManager lootManager, Player player)
     {
         _lootManager = lootManager;
         _player = player.transform;
+        _currentWave = -1;
     }
 
-    public void NextWave(int wave)
+    public void NextWave()
     {
         StopAllCoroutines();
+
+        _currentWave ++;
+
+        if (_currentWave >= _enemyChapter.EnemyWaves[0].NumberPerSecund.Length)
+        {
+            _lastWave = true;
+            //Debug.Log("true" + _currentWave);
+            return;
+        }
+
+        //Debug.Log("false:" + _currentWave);
+
         for (int i = 0; i < _enemyChapter.EnemyWaves.Length; i++)
         {
-            if (_enemyChapter.EnemyWaves[i].NumberPerSecund[wave] > 0)
+            if (_enemyChapter.EnemyWaves[i].NumberPerSecund[_currentWave] > 0)
             {
                 Enemy enemy = _enemyChapter.EnemyWaves[i].Enemy;
                 if (!_pools.TryGetValue(enemy, out _))
@@ -40,7 +57,7 @@ public class EnemySpawner : MonoBehaviour
                     _pools.Add(enemy, pool);
                 }
 
-                StartCoroutine(SpawnRoutuine(_enemyChapter.EnemyWaves[i].Enemy, _enemyChapter.EnemyWaves[i].NumberPerSecund[wave]));
+                StartCoroutine(SpawnRoutuine(_enemyChapter.EnemyWaves[i].Enemy, _enemyChapter.EnemyWaves[i].NumberPerSecund[_currentWave]));
             }
         }
     }
@@ -85,6 +102,11 @@ public class EnemySpawner : MonoBehaviour
 
         _enemyToPool[enemy].Release(enemy);
         _enemyToPool.Remove(enemy);
+
+        if (_lastWave && _spawnedEnemies.Count == 0)
+        {
+            AllEnemiesDie?.Invoke();
+        }
     }
 
     // private void OnDrawGizmos()
