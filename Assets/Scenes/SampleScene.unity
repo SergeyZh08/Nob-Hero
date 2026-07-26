@@ -1443,8 +1443,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EffectManager
   _continuousEffects:
   - {fileID: 11400000, guid: 9155199a2fb0b46c7a598e4e37d5ed58, type: 2}
-  - {fileID: 11400000, guid: 11f5fb5ffa90c482fb74ae621d8c9b13, type: 2}
-  - {fileID: 11400000, guid: fad13527365494a95850c03977ba718d, type: 2}
+  - {fileID: 11400000, guid: ee4b83b2c3a1042509ae2da5bf37bb1d, type: 2}
   _collectedContinuousEffects: []
   _oneTimeEffects:
   - {fileID: 11400000, guid: b3aca15a6ab264bb4a1cf6d32eb153f3, type: 2}
@@ -4914,7 +4913,7 @@ Transform:
   m_GameObject: {fileID: 1457118481}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.01, y: 0, z: -2.526}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

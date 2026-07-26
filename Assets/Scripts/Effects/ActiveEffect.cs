@@ -1,22 +1,35 @@
+using System;
 using UnityEngine;
 
+[AttributeUsage(AttributeTargets.Field)]
+public class StatNameAttribute : Attribute
+{
+    public string Name;
+
+    public StatNameAttribute(string name)
+    {
+        Name = name;
+    }
+}
 [System.Serializable]
 public struct LevelStats
 {
-    public float Cooldown;
-    public float Damage;
-    public float Radius;
-    public int Number;
-    public float DPS;
-    public int PassCount;
-    public float LifeTime;
-    public float Speed;
+    [StatName("Cooldown")] public float Cooldown;
+
+    [StatName("Damage")] public float Damage;
+    [StatName("Radius")] public float Radius;
+    [StatName("Number of effects")] public int Number;
+    [StatName("Damage per second")] public float DPS;
+    [StatName("Pass count")] public int PassCount;
+    [StatName("Life time")] public float LifeTime;
+    [StatName("Speed")] public float Speed;
 }
 
 public class ActiveEffect : Effect
 {
     [SerializeField] private LevelStats[] _level = new LevelStats[10];
     public LevelStats Current => _level[Mathf.Clamp(Level - 1, 0, _level.Length - 1)];
+    public LevelStats NextLevel => _level[Mathf.Clamp(Level, 0, _level.Length - 1)];
     public override float CooldownProgress => _timer / ApplyCooldownBoost(Current.Cooldown);
     private float _timer = 0;
 
