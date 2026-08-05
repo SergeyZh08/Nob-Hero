@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameBootstrap : MonoBehaviour
@@ -11,6 +12,8 @@ public class GameBootstrap : MonoBehaviour
     [SerializeField] private TopIconManager _topIconManager;
     [SerializeField] private LevelupManager _levelupManager;
     [SerializeField] private GameManager _gameManager;
+    [SerializeField] private SaveManager _saveManager;
+    [SerializeField] private WaweManager _waweManager;
 
     private void Awake()
     {
@@ -22,5 +25,10 @@ public class GameBootstrap : MonoBehaviour
         _enemySpawner.Init(_lootManager, _player);
         _lootManager.Init();
         _levelupManager.Init();
+        _saveManager.Init();
+
+        _saveManager.Register(_player.Inventory);
+        _saveManager.Register(_waweManager);
+        _saveManager.Load();
     }
 }
