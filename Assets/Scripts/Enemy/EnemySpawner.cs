@@ -7,13 +7,13 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private EnemyVisualProvider _enemyVisualProvider;
-    [SerializeField] private ChapterSettings _enemyChapter;
     [SerializeField] private float _radiusForSpawn;
     [Header("Enemy Pool")]
     [SerializeField] private int _startSize;
     [SerializeField] private int _step;
     [SerializeField] private Transform _parent;
-
+    private ChapterManager _waweManager;
+    private ChapterSettings _currentChapter;
     private LootManager _lootManager;
     private Transform _player;
 
@@ -24,11 +24,14 @@ public class EnemySpawner : MonoBehaviour
     private bool _lastWave;
     private int _currentWave;
 
-    public void Init(LootManager lootManager, Player player)
+    public void Init(LootManager lootManager, Player player, ChapterManager waweManager)
     {
+        _waweManager = waweManager;
         _lootManager = lootManager;
         _player = player.transform;
         _currentWave = -1;
+
+        _currentChapter = waweManager.GetChapterSettings;
     }
 
     public void NextWave()
@@ -37,7 +40,7 @@ public class EnemySpawner : MonoBehaviour
 
         _currentWave ++;
 
-        if (_currentWave >= _enemyChapter.EnemyWaves[0].NumberPerSecund.Length)
+        if (_currentWave >= _currentChapter.EnemyWaves[0].NumberPerSecund.Length)
         {
             _lastWave = true;
             //Debug.Log("true" + _currentWave);
@@ -46,18 +49,18 @@ public class EnemySpawner : MonoBehaviour
 
         //Debug.Log("false:" + _currentWave);
 
-        for (int i = 0; i < _enemyChapter.EnemyWaves.Length; i++)
+        for (int i = 0; i < _currentChapter.EnemyWaves.Length; i++)
         {
-            if (_enemyChapter.EnemyWaves[i].NumberPerSecund[_currentWave] > 0)
+            if (_currentChapter.EnemyWaves[i].NumberPerSecund[_currentWave] > 0)
             {
-                Enemy enemy = _enemyChapter.EnemyWaves[i].Enemy;
+                Enemy enemy = _currentChapter.EnemyWaves[i].Enemy;
                 if (!_pools.TryGetValue(enemy, out _))
                 {
                     Pool<Enemy> pool = new Pool<Enemy>(enemy, _startSize, _step, _parent);
                     _pools.Add(enemy, pool);
                 }
 
-                StartCoroutine(SpawnRoutuine(_enemyChapter.EnemyWaves[i].Enemy, _enemyChapter.EnemyWaves[i].NumberPerSecund[_currentWave]));
+                StartCoroutine(SpawnRoutuine(_currentChapter.EnemyWaves[i].Enemy, _currentChapter.EnemyWaves[i].NumberPerSecund[_currentWave]));
             }
         }
     }

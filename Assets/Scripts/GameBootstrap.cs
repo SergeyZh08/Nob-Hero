@@ -13,16 +13,15 @@ public class GameBootstrap : MonoBehaviour
     [SerializeField] private LevelupManager _levelupManager;
     [SerializeField] private GameManager _gameManager;
     [SerializeField] private SaveManager _saveManager;
-    [SerializeField] private WaweManager _waweManager;
+    [SerializeField] private ChapterManager _waweManager;
 
     private void Awake()
     {
-        _gameManager.Init(_gameStateManager, _enemySpawner, _player);
+        _gameManager.Init(_gameStateManager, _enemySpawner, _player, _waweManager, _saveManager);
         _player.Init();
         _effectManager.Init(_enemySpawner, _cardManager, _topIconManager, _player);
         _cardManager.Init(_effectManager, _gameStateManager, _enemySpawner);
         _gameStateManager.Init();
-        _enemySpawner.Init(_lootManager, _player);
         _lootManager.Init();
         _levelupManager.Init();
         _saveManager.Init();
@@ -30,5 +29,7 @@ public class GameBootstrap : MonoBehaviour
         _saveManager.Register(_player.Inventory);
         _saveManager.Register(_waweManager);
         _saveManager.Load();
+
+        _enemySpawner.Init(_lootManager, _player, _waweManager);
     }
 }

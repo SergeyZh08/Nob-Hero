@@ -8,12 +8,14 @@ public class UiCoins : MonoBehaviour
 
     private void Start()
     {
-        _player.Inventory.OnCoinAdded += SetValue;
+        _player.Inventory.OnCoinChanged += SetValue;
+
+        SetValue(_player.Inventory.CoinCount);
     }
 
     private void OnDestroy()
     {
-        _player.Inventory.OnCoinAdded -= SetValue;
+        _player.Inventory.OnCoinChanged -= SetValue;
     }
 
     private void SetValue(int value)

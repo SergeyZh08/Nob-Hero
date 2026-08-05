@@ -9,4 +9,11 @@ public class WinState : GameState
         Time.timeScale = 0f;
         _winWindow.Show();
     }
+
+    public override void Exit()
+    {
+        base.Exit();
+        Time.timeScale = 1f;
+        _winWindow.Hide();
+    }
 }

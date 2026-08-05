@@ -3,8 +3,9 @@ using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour, ISaved
 {
-    public event Action<int> OnCoinAdded;
+    public event Action<int> OnCoinChanged;
     public Player Player { get; private set; }
+    public int CoinCount => _coinCount;
     private int _coinCount;
 
     public void Init(Player player)
@@ -15,7 +16,7 @@ public class PlayerInventory : MonoBehaviour, ISaved
     public void AddCoin(int value)
     {
         _coinCount += value;
-        OnCoinAdded?.Invoke(_coinCount);
+        OnCoinChanged?.Invoke(_coinCount);
     }
 
     public void SaveTo(SaveData data)
@@ -28,6 +29,6 @@ public class PlayerInventory : MonoBehaviour, ISaved
     {
         _coinCount = data.Coins;
         Debug.Log("Load: " + data.Coins);
-        OnCoinAdded?.Invoke(_coinCount);
+        OnCoinChanged?.Invoke(_coinCount);
     }
 }
