@@ -7,12 +7,12 @@ public class KnifeEffect : ActiveEffect
 {
     private Pool<Knife> _pool;
     [SerializeField] private Knife _knifePrefab;
-    private Knife[] _knives = new Knife[12];
+    private Knife[] _knives = new Knife[24];
 
     protected override void FirstTimeActivate()
     {
         base.FirstTimeActivate();
-        _pool = new Pool<Knife>(_knifePrefab, 12, 1, null);
+        _pool = new Pool<Knife>(_knifePrefab, 24, 1, null);
     }
 
     protected override void Produce()

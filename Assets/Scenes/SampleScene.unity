@@ -1536,6 +1536,7 @@ MonoBehaviour:
   _continuousEffects:
   - {fileID: 11400000, guid: 9155199a2fb0b46c7a598e4e37d5ed58, type: 2}
   - {fileID: 11400000, guid: ee4b83b2c3a1042509ae2da5bf37bb1d, type: 2}
+  - {fileID: 11400000, guid: a8a1f6771e99c41ffa6988237245a57f, type: 2}
   _collectedContinuousEffects: []
   _oneTimeEffects:
   - {fileID: 11400000, guid: b3aca15a6ab264bb4a1cf6d32eb153f3, type: 2}
@@ -2639,6 +2640,10 @@ PrefabInstance:
       value: 'Lvl: + 0'
       objectReference: {fileID: 0}
     - target: {fileID: 4448581710221879646, guid: 6d67214311ad4422d920a4488ddc15fe, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448581710221879646, guid: 6d67214311ad4422d920a4488ddc15fe, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 07f13fab8e63749108c534215d4e4834, type: 3}
@@ -3031,11 +3036,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: d438a863e753a4040a8c8e1b46d306d2, type: 3}
     - target: {fileID: 8152475456537471219, guid: d623ab8b6f8dab34c940d296f921fd2c, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 34.566986
+      value: 48.79599
       objectReference: {fileID: 0}
     - target: {fileID: 8152475456537471219, guid: d623ab8b6f8dab34c940d296f921fd2c, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 34.566986
+      value: 48.79599
       objectReference: {fileID: 0}
     - target: {fileID: 8196812612993696243, guid: d623ab8b6f8dab34c940d296f921fd2c, type: 3}
       propertyPath: m_Pivot.x
@@ -3127,11 +3132,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 0473c23a0a9cb764086dca6bc1895d13, type: 3}
     - target: {fileID: 8196812613576827625, guid: d623ab8b6f8dab34c940d296f921fd2c, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 123.896
+      value: 124.16801
       objectReference: {fileID: 0}
     - target: {fileID: 8196812613576827625, guid: d623ab8b6f8dab34c940d296f921fd2c, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 123.896
+      value: 124.16801
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3455,6 +3460,10 @@ PrefabInstance:
     - target: {fileID: 2701312556987971872, guid: 6d67214311ad4422d920a4488ddc15fe, type: 3}
       propertyPath: m_text
       value: 'Lvl: + 0'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448581710221879646, guid: 6d67214311ad4422d920a4488ddc15fe, type: 3}
+      propertyPath: m_Type
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4847812078414458594, guid: 6d67214311ad4422d920a4488ddc15fe, type: 3}
       propertyPath: m_Name
@@ -4473,7 +4482,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36ae30a4d14a7444eafd3afdba1086f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WinWindow
-  _gameStateManager: {fileID: 1123223405}
   _button: {fileID: 1125317800}
 --- !u!224 &1313361132
 RectTransform:
@@ -7632,6 +7640,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1088590856}
     m_Modifications:
+    - target: {fileID: 4448581710221879646, guid: 6d67214311ad4422d920a4488ddc15fe, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4847812078414458594, guid: 6d67214311ad4422d920a4488ddc15fe, type: 3}
       propertyPath: m_Name
       value: Card

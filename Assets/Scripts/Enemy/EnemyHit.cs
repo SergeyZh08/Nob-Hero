@@ -52,10 +52,14 @@ public class EnemyHit : MonoBehaviour
 
     private IEnumerator HitVisualRoutine(float damage)
     {
+        //_scaleObject.localScale = _startTextSize;
+
         for (float t = 0; t < _animationTime; t += Time.deltaTime)
         {
-            //_damageText.fontSize *= Mathf.Sin(t);
-            _damageText.text = damage.ToString();
+            _damageText.SetText("{0}", (int)damage);
+
+            //_scaleObject.localScale += _startTextSize * _sizeDelta;
+
             yield return null;
         }
 
