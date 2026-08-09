@@ -15,7 +15,7 @@ public class EnemyHit : MonoBehaviour
     {
         if (_enemy)
         {
-            _enemy.OnEnemyHit += Hit;
+            _enemy.Health.OnEnemyHit += Hit;
         }
         
         _currentDamage = 0;
@@ -26,7 +26,7 @@ public class EnemyHit : MonoBehaviour
     {
         if (_enemy)
         {
-            _enemy.OnEnemyHit -= Hit;
+            _enemy.Health.OnEnemyHit -= Hit;
         }
         
         if (_currentCoroutine != null)

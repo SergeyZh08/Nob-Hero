@@ -463,6 +463,9 @@ GameObject:
   - component: {fileID: 8958729516352189406}
   - component: {fileID: 2005082798974011064}
   - component: {fileID: 5246232904906011532}
+  - component: {fileID: 4786288132962520242}
+  - component: {fileID: 3959612048733044076}
+  - component: {fileID: -402677099580147469}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: Untagged
@@ -501,16 +504,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa21e5407f7a4640873cb7f4a14d459, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  <LootDrop>k__BackingField: {fileID: 11400000, guid: 3c9de733d961348eb979c70b89d97286, type: 2}
-  _maxHealth: 5
-  _health: 5
-  _dps: 5
-  _speed: 2
-  _angularSpeed: 3
-  _radiusForAttack: 2
-  _attackPeriod: 0.1
-  _rigidbody: {fileID: 2005082798974011064}
-  _distanceToCarry: 12
+  <Movement>k__BackingField: {fileID: -402677099580147469}
+  <Health>k__BackingField: {fileID: 3959612048733044076}
+  <Attack>k__BackingField: {fileID: 4786288132962520242}
+  <Drop>k__BackingField: {fileID: 11400000, guid: 3c9de733d961348eb979c70b89d97286, type: 2}
 --- !u!54 &2005082798974011064
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -559,6 +556,51 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4786288132962520242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9040023562488537195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3936f4bdc24e4d78922b8e5548e8f47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
+  _dps: 5
+  _attackPeriod: 0.1
+  _radiusForAttack: 1
+--- !u!114 &3959612048733044076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9040023562488537195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f96e94c30e904cbaa8cd01b24a718d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
+  _maxHealth: 5
+  _health: 5
+--- !u!114 &-402677099580147469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9040023562488537195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78732c90826f649f1bfcb9b168b6bd94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
+  _speed: 5
+  _angularSpeed: 60
+  _rigidbody: {fileID: 2005082798974011064}
+  _distanceToCarry: 20
 --- !u!1001 &9201427601430314960
 PrefabInstance:
   m_ObjectHideFlags: 0

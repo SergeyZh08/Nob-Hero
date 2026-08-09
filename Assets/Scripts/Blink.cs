@@ -19,7 +19,7 @@ public class Blink : MonoBehaviour
     {
         if (_enemy)
         {
-            _enemy.OnEnemyHit += StartBlink;
+            _enemy.Health.OnEnemyHit += StartBlink;
         }
     }
 
@@ -27,7 +27,7 @@ public class Blink : MonoBehaviour
     {
         if (_enemy)
         {
-            _enemy.OnEnemyHit -= StartBlink;
+            _enemy.Health.OnEnemyHit -= StartBlink;
         }
 
         if (_currentCoroutine != null)

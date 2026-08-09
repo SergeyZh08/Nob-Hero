@@ -17,7 +17,7 @@ public class LootManager : MonoBehaviour
             return;
         }
 
-        LootItem item = enemy.LootDrop.GetItem();
+        LootItem item = enemy.Drop.GetItem();
         
         if (!_pools.TryGetValue(item.Loot, out Pool<Loot> pool))
         {

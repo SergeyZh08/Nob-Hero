@@ -90,7 +90,7 @@ public class EnemySpawner : MonoBehaviour
         newEnemy.OnEnemyDie += _lootManager.CreateLoot;
         newEnemy.OnEnemyDie += RemoveEnemy;
 
-        newEnemy.Init(_player);
+        newEnemy.Movement.SetTarget(_player);
         _spawnedEnemies.Add(newEnemy);
     }
 

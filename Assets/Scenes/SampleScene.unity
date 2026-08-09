@@ -296,6 +296,7 @@ MonoBehaviour:
   _gameManager: {fileID: 1856063756}
   _saveManager: {fileID: 683868845}
   _waweManager: {fileID: 566555670}
+  _enemy: {fileID: 0}
 --- !u!4 &25430603
 Transform:
   m_ObjectHideFlags: 0

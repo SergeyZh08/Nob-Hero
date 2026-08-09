@@ -82,7 +82,7 @@ public class BlackHole : MonoBehaviour, ISpeedModifier
         {
             enemy.OnEnemyDie += RemoveEnemy;
             _enemies.Add(enemy);
-            enemy.AddModifier(this);
+            enemy.Movement.AddModifier(this);
         }
     }
 
@@ -98,7 +98,7 @@ public class BlackHole : MonoBehaviour, ISpeedModifier
     {
         enemy.OnEnemyDie -= RemoveEnemy;
         _enemies.Remove(enemy);
-        enemy.RemoveModifier(this);
+        enemy.Movement.RemoveModifier(this);
     }
 
     public void Activate()
