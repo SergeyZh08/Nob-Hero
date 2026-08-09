@@ -1,11 +1,6 @@
 using System.Collections;
 using UnityEngine;
 
-public interface IPlayerHealthModifier
-{
-    public float ModifyDamage(float value);
-}
-
 public class Shield : MonoBehaviour, IPlayerHealthModifier
 {
     private Transform _target;
@@ -40,6 +35,7 @@ public class Shield : MonoBehaviour, IPlayerHealthModifier
 
     public float ModifyDamage(float value)
     {
+        //без урона, если включен
         return gameObject.activeSelf ? 0 : value;
     }
 

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour, IPoolable
@@ -19,6 +20,8 @@ public class Enemy : MonoBehaviour, IPoolable
     private Transform _target;
     public event Action<Enemy> OnEnemyDie;
     public event Action<float> OnEnemyHit;
+    private List<ISpeedModifier> _speedModifiers = new List<ISpeedModifier>();
+    private float _modifierSpeed = 1f;
 
     public void Init(Transform target)
     {
@@ -41,7 +44,7 @@ public class Enemy : MonoBehaviour, IPoolable
 
     private void FixedUpdate()
     {
-        _rigidbody.linearVelocity = transform.forward * _speed;
+        _rigidbody.linearVelocity = _speed * _modifierSpeed * transform.forward;
 
         Vector3 toTarget = _target.position - transform.position;
 
@@ -91,6 +94,28 @@ public class Enemy : MonoBehaviour, IPoolable
     private void Attack()
     {
         _player.Health.TakeDamage(_dps * _attackPeriod);
+    }
+
+    public void AddModifier(ISpeedModifier modifier)
+    {
+        _speedModifiers.Add(modifier);
+        CalculateModifierSpeed();
+    }
+
+    public void RemoveModifier(ISpeedModifier modifier)
+    {
+        _speedModifiers.Remove(modifier);
+        CalculateModifierSpeed();
+    }
+
+    private void CalculateModifierSpeed()
+    {
+        _modifierSpeed = 1f;
+
+        foreach (var m in _speedModifiers)
+        {
+            _modifierSpeed = m.ModifySpeed(_modifierSpeed);
+        }
     }
 
     public void OnGetFromPool()

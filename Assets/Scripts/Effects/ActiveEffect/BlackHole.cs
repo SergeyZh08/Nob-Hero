@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BlackHole : MonoBehaviour
+public class BlackHole : MonoBehaviour, ISpeedModifier
 {
     [SerializeField] private float _timeForChangeDirection;
     private List<Enemy> _enemies = new List<Enemy>();
@@ -46,11 +46,15 @@ public class BlackHole : MonoBehaviour
     {
         yield return new WaitForSeconds(lifeTime);
 
+        Vector3 startSize = transform.localScale;
+
         for (float t = 0; t <= 1; t += Time.deltaTime)
         {
-            transform.localScale = transform.localScale * (1 - t);
+            transform.localScale = startSize * (1 - t);
             yield return null;
         }
+
+        transform.localScale = Vector3.zero;
 
         Deactivate();
     }
@@ -78,6 +82,7 @@ public class BlackHole : MonoBehaviour
         {
             enemy.OnEnemyDie += RemoveEnemy;
             _enemies.Add(enemy);
+            enemy.AddModifier(this);
         }
     }
 
@@ -93,6 +98,7 @@ public class BlackHole : MonoBehaviour
     {
         enemy.OnEnemyDie -= RemoveEnemy;
         _enemies.Remove(enemy);
+        enemy.RemoveModifier(this);
     }
 
     public void Activate()
@@ -104,5 +110,11 @@ public class BlackHole : MonoBehaviour
     {
         _enemies.Clear();
         gameObject.SetActive(false);
+    }
+
+    public float ModifySpeed(float value)
+    {
+        //скорость делим на 4
+        return gameObject.activeSelf ? value * 0.25f : value;
     }
 }
