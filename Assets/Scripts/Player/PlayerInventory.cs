@@ -19,6 +19,12 @@ public class PlayerInventory : MonoBehaviour, ISaved
         OnCoinChanged?.Invoke(_coinCount);
     }
 
+    public void SpendCoin(int value)
+    {
+        _coinCount -= value;
+        OnCoinChanged?.Invoke(_coinCount);
+    }
+
     public void SaveTo(SaveData data)
     {
         data.Coins = _coinCount;
