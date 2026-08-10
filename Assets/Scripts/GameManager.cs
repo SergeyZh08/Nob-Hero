@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
         _enemySpawner.AllEnemiesDie -= SetWin;
     }
 
+    //решить, нужно ли сохранять монеты при поражении (пока не нужно)
     private void SetLose() => _gameStateManager.SetLose();
     private void SetWin()
     {

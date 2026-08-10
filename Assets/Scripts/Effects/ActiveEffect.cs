@@ -49,6 +49,7 @@ public class ActiveEffect : Effect
         
     }
 
+    //100% + player stats (ex.: val * (100% + 10%))
     protected float ApplyDamageBoost(float value) => value * (1 + _player.Stats.DamageBoost);
     protected float ApplyRadiusBoost(float value) => value * (1 + _player.Stats.RadiusBoost);
     protected float ApplyCooldownBoost(float value) => value * (1 - _player.Stats.CooldownBoost);
