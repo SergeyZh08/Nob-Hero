@@ -24,8 +24,11 @@ public class PlayerHealth : MonoBehaviour
     {
         Player = player;
 
-        SetHealth(_playerHealthData.Health);
         _startMaxHp = _playerHealthData.MaxHealth;
+
+        _playerHealthData.Health = _playerHealthData.MaxHealth;
+
+        SetHealth(_playerHealthData.Health);
     }
 
     private void Update()
@@ -81,10 +84,22 @@ public class PlayerHealth : MonoBehaviour
         OnHealthChanged?.Invoke(_playerHealthData);
     }
 
-    public void SetBoostHp()
+    public void RecalculateMaxHealth()
+    {
+        RecalculateMaxHealthValue();
+        OnHealthChanged?.Invoke(_playerHealthData);
+    }
+
+    public void ApplyStats()
+    {
+        RecalculateMaxHealthValue();
+        _playerHealthData.Health = _playerHealthData.MaxHealth;
+        OnHealthChanged?.Invoke(_playerHealthData);
+    }
+
+    private void RecalculateMaxHealthValue()
     {
         _playerHealthData.MaxHealth = _startMaxHp * (1 + Player.Stats.MaxHPBoost);
-        OnHealthChanged?.Invoke(_playerHealthData);
     }
 
     public void AddModifiers(IPlayerHealthModifier modifier)

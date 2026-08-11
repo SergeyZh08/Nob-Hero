@@ -8,6 +8,6 @@ public class MaxHPEffect : PassiveEffect
     {
         base.Activate();
         _player.Stats.MaxHPBoost += _boost[Level - 1];
-        _player.Health.SetBoostHp();
+        _player.Health.RecalculateMaxHealth();
     }
 }

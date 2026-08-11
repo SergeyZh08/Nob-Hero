@@ -28,13 +28,11 @@ public class PlayerInventory : MonoBehaviour, ISaved
     public void SaveTo(SaveData data)
     {
         data.Coins = _coinCount;
-        Debug.Log("Save: " + data.Coins);
     }
 
     public void LoadFrom(SaveData data)
     {
         _coinCount = data.Coins;
-        Debug.Log("Load: " + data.Coins);
         OnCoinChanged?.Invoke(_coinCount);
     }
 }

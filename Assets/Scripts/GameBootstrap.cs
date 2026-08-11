@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameBootstrap : MonoBehaviour
@@ -26,12 +25,15 @@ public class GameBootstrap : MonoBehaviour
         _lootManager.Init();
         _levelupManager.Init();
         _saveManager.Init();
-        _progressCardsManager.Init(_player);
+        _progressCardsManager.Init(_player, _saveManager);
 
         _saveManager.Register(_player.Inventory);
+        _saveManager.Register(_player.Stats);
         _saveManager.Register(_waweManager);
         _saveManager.Register(_progressCardsManager);
         _saveManager.Load();
+
+        _player.Health.ApplyStats();
 
         _enemySpawner.Init(_lootManager, _player, _waweManager);
     }

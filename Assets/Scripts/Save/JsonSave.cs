@@ -29,7 +29,9 @@ public class JsonSave : IStorageService
         return new SaveData
         {
             Wawe = 0,
-            Coins = 0
+            Coins = 0,
+            ProgressDataLevels = null,
+            PermanentStats = null
         };
     }
 

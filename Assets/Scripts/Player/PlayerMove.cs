@@ -25,7 +25,7 @@ public class PlayerMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector3 speedVector = new Vector3(_movement.x, 0, _movement.y) * _speed * (1 + Player.Stats.MovementSpeed); 
+        Vector3 speedVector = _speed * (1 + Player.Stats.MovementSpeed) * new Vector3(_movement.x, 0, _movement.y); 
         _rigidbody.linearVelocity = speedVector;
 
         if (_rigidbody.linearVelocity != Vector3.zero)
