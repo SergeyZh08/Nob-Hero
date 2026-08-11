@@ -7,6 +7,6 @@ public class NumberEffect : PassiveEffect
     public override void Activate()
     {
         base.Activate();
-        _player.Stats.NumberBoost += _boost[Level - 1];
+        _player.Stats.AddNumberBoost(_boost[Level - 1]);
     }
 }

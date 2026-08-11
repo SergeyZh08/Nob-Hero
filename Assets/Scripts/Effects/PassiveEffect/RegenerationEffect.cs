@@ -7,6 +7,6 @@ public class RegenerationEffect : PassiveEffect
     public override void Activate()
     {
         base.Activate();
-        _player.Stats.RegenerationBoost += _boost[Level - 1];
+        _player.Stats.AddRegenerationBoost(_boost[Level - 1]);
     }
 }

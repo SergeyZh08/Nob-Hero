@@ -8,6 +8,6 @@ public class DamageEffect : PassiveEffect
     public override void Activate()
     {
         base.Activate();
-        _player.Stats.DamageBoost += _boost[Level - 1];
+        _player.Stats.AddDamageBoost(_boost[Level - 1]);
     }
 }

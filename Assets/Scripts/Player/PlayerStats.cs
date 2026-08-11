@@ -15,6 +15,12 @@ public class PlayerStats : MonoBehaviour, ISaved
     private float _damage = 0;
     private float _speed = 0;
     private float _maxHP = 0;
+    private float _cooldown = 0;
+    private float _radius = 0;
+    private float _regeneration = 0;
+    private float _magnet = 0;
+    private int _number = 0;
+    private int _passCount = 0;
 
     public void Init(Player player)
     {
@@ -22,49 +28,64 @@ public class PlayerStats : MonoBehaviour, ISaved
         PermanentStats = new PermanentStats();
     }
     
-    public float CooldownBoost;
-    public float DamageBoost
-    {
-        get
-        {
-            return _damage + PermanentStats.Damage;
-        }
-        set
-        {
-            _damage = value;
-        }
-    }
+    public float CooldownBoost => _cooldown;
+    public float DamageBoost => _damage + PermanentStats.Damage;
 
-    public float MaxHPBoost
-    {
-        get
-        {
-            return _maxHP + PermanentStats.Health;
-        }
-        set
-        {
-            _maxHP = value;
-        }
-    }
+    public float MaxHPBoost => _maxHP + PermanentStats.Health;
 
-    public float MovementSpeed
-    {
-        get
-        {
-            return _speed + PermanentStats.Speed;
-        }
-        set
-        {
-            _speed = value;
-        }
-    }
+    public float MovementSpeed => _speed + PermanentStats.Speed;
 
-    public float RadiusBoost;
-    public float RegenerationBoost;
-    public float MagnetBoost;
+    public float RadiusBoost => _radius;
+    public float RegenerationBoost => _regeneration;
+    public float MagnetBoost => _magnet;
     
-    public int NumberBoost;
-    public int PassCountBoost;
+    public int NumberBoost => _number;
+    public int PassCountBoost => _passCount;
+
+    public void AddMaxHPBoost(float value)
+    {
+        _maxHP += value;
+    }
+
+    public void AddSpeedBoost(float value)
+    {
+        _speed += value;
+    }
+
+    public void AddDamageBoost(float value)
+    {
+        _damage += value;
+    }
+
+    public void AddCooldownBoost(float value)
+    {
+        _cooldown += value;
+    }
+
+    public void AddRadiusBoost(float value)
+    {
+        _radius += value;
+    }
+
+    public void AddRegenerationBoost(float value)
+    {
+        _regeneration += value;
+    }
+
+    public void AddMagnetBoost(float value)
+    {
+        _magnet += value;
+    }
+
+    public void AddNumberBoost(int value)
+    {
+        _number += value;
+    }
+
+    public void AddPassCountBoost(int value)
+    {
+        _passCount += value;
+    }
 
     public void AddPermanentHealth(float value)
     {

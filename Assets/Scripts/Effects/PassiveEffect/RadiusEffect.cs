@@ -8,6 +8,6 @@ public class RadiusEffect : PassiveEffect
     public override void Activate()
     {
         base.Activate();
-        _player.Stats.RadiusBoost += _boost[Level - 1];
+        _player.Stats.AddRadiusBoost(_boost[Level - 1]);
     }
 }

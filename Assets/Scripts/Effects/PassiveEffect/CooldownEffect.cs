@@ -8,6 +8,6 @@ public class CooldownEffect : PassiveEffect
     public override void Activate()
     {
         base.Activate();
-        _player.Stats.CooldownBoost += _boost[Level - 1];
+        _player.Stats.AddCooldownBoost(_boost[Level - 1]);
     }
 }

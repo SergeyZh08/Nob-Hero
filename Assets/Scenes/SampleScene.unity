@@ -2787,6 +2787,7 @@ MonoBehaviour:
   _collectedContinuousEffects: []
   _oneTimeEffects:
   - {fileID: 11400000, guid: b3aca15a6ab264bb4a1cf6d32eb153f3, type: 2}
+  - {fileID: 11400000, guid: 2bb5f31b3839f4916b41dd1cf76e620f, type: 2}
   _collectedOneTimeEffects: []
 --- !u!4 &500661257
 Transform:
@@ -4840,11 +4841,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: d438a863e753a4040a8c8e1b46d306d2, type: 3}
     - target: {fileID: 8152475456537471219, guid: d623ab8b6f8dab34c940d296f921fd2c, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 34.642876
+      value: 34.68082
       objectReference: {fileID: 0}
     - target: {fileID: 8152475456537471219, guid: d623ab8b6f8dab34c940d296f921fd2c, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 34.642876
+      value: 34.68082
       objectReference: {fileID: 0}
     - target: {fileID: 8196812612993696243, guid: d623ab8b6f8dab34c940d296f921fd2c, type: 3}
       propertyPath: m_Pivot.x
@@ -4936,11 +4937,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 0473c23a0a9cb764086dca6bc1895d13, type: 3}
     - target: {fileID: 8196812613576827625, guid: d623ab8b6f8dab34c940d296f921fd2c, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 124.16801
+      value: 124.30401
       objectReference: {fileID: 0}
     - target: {fileID: 8196812613576827625, guid: d623ab8b6f8dab34c940d296f921fd2c, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 124.16801
+      value: 124.30401
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7538,15 +7539,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63e14583ed5c34959b9dba67ee671ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
-  CooldownBoost: 0
-  DamageBoost: 0
-  RadiusBoost: 0
-  RegenerationBoost: 0
-  MagnetBoost: 0
-  MaxHPBoost: 0
-  NumberBoost: 0
-  PassCountBoost: 0
-  MovementSpeed: 0
 --- !u!114 &1457118489
 MonoBehaviour:
   m_ObjectHideFlags: 0
