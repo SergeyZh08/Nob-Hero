@@ -1153,7 +1153,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
   _enemyVisualProvider: {fileID: 1831673814}
-  _radiusForSpawn: 10
+  _radiusForSpawnInside: 20
+  _radiusForSpawnOutside: 30
   _startSize: 1
   _step: 0
   _parent: {fileID: 956295012}
@@ -2781,13 +2782,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EffectManager
   _continuousEffects:
-  - {fileID: 11400000, guid: 9155199a2fb0b46c7a598e4e37d5ed58, type: 2}
   - {fileID: 11400000, guid: ee4b83b2c3a1042509ae2da5bf37bb1d, type: 2}
+  - {fileID: 11400000, guid: 9155199a2fb0b46c7a598e4e37d5ed58, type: 2}
+  - {fileID: 11400000, guid: c6a3d2d9b07fc48f993342f4f53de803, type: 2}
+  - {fileID: 11400000, guid: 9d5b4d96d9cf3452894dacb64772c543, type: 2}
   - {fileID: 11400000, guid: a8a1f6771e99c41ffa6988237245a57f, type: 2}
+  - {fileID: 11400000, guid: 1292d27992a254f858f29a15a2707dca, type: 2}
+  - {fileID: 11400000, guid: c6e328c6f91e349a19f8755eaa68efb5, type: 2}
+  - {fileID: 11400000, guid: fcda4e918bf3841418ce2d98126d160e, type: 2}
+  - {fileID: 11400000, guid: beea4ad6d337b4cae808aba67171b32e, type: 2}
+  - {fileID: 11400000, guid: 11f5fb5ffa90c482fb74ae621d8c9b13, type: 2}
+  - {fileID: 11400000, guid: fad13527365494a95850c03977ba718d, type: 2}
   _collectedContinuousEffects: []
   _oneTimeEffects:
-  - {fileID: 11400000, guid: b3aca15a6ab264bb4a1cf6d32eb153f3, type: 2}
+  - {fileID: 11400000, guid: 91aebdef8902c4db4be1344bcb541c54, type: 2}
+  - {fileID: 11400000, guid: 17effb2317e36422ca7c9fd01982f7d4, type: 2}
+  - {fileID: 11400000, guid: 231e3025ccbd847f9a90a2af6c50da89, type: 2}
   - {fileID: 11400000, guid: 2bb5f31b3839f4916b41dd1cf76e620f, type: 2}
+  - {fileID: 11400000, guid: b6107e3766f2244598d2a724ef4a8b99, type: 2}
+  - {fileID: 11400000, guid: a1f873e321d9b47048bcc03dbfb2ed4f, type: 2}
+  - {fileID: 11400000, guid: 91cb461c8e2f644cc82364a01c995ed1, type: 2}
+  - {fileID: 11400000, guid: b3aca15a6ab264bb4a1cf6d32eb153f3, type: 2}
+  - {fileID: 11400000, guid: c5509b669264943e997fb37d4b1e3043, type: 2}
   _collectedOneTimeEffects: []
 --- !u!4 &500661257
 Transform:
@@ -4841,11 +4857,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: d438a863e753a4040a8c8e1b46d306d2, type: 3}
     - target: {fileID: 8152475456537471219, guid: d623ab8b6f8dab34c940d296f921fd2c, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 34.68082
+      value: 38.209614
       objectReference: {fileID: 0}
     - target: {fileID: 8152475456537471219, guid: d623ab8b6f8dab34c940d296f921fd2c, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 34.68082
+      value: 38.209614
       objectReference: {fileID: 0}
     - target: {fileID: 8196812612993696243, guid: d623ab8b6f8dab34c940d296f921fd2c, type: 3}
       propertyPath: m_Pivot.x
@@ -4937,11 +4953,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 0473c23a0a9cb764086dca6bc1895d13, type: 3}
     - target: {fileID: 8196812613576827625, guid: d623ab8b6f8dab34c940d296f921fd2c, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 124.30401
+      value: 136.95201
       objectReference: {fileID: 0}
     - target: {fileID: 8196812613576827625, guid: d623ab8b6f8dab34c940d296f921fd2c, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 124.30401
+      value: 136.95201
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7462,7 +7478,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1457118481}
   serializedVersion: 5
-  m_Mass: 500
+  m_Mass: 10
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}

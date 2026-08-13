@@ -17,7 +17,14 @@ MonoBehaviour:
     NumberPerSecund:
     - 1
     - 2
+    - 2
+    - 2
+    - 2
+    - 2
   - Enemy: {fileID: 8710286029589797408, guid: aa3b5e43ed11e46c9ac2eee9abd75a1c, type: 3}
     NumberPerSecund:
     - 1
+    - 2
+    - 2
+    - 2
     - 2

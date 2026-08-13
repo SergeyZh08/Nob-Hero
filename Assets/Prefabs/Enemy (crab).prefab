@@ -39,7 +39,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 281827678422410159}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 973ff345ae18940e58b7c23ada9b5d86, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -51,7 +51,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 0.45
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &693588853783410530
 GameObject:
@@ -231,7 +231,7 @@ GameObject:
   - component: {fileID: 1117667899775987437}
   - component: {fileID: 5215813007575683977}
   m_Layer: 8
-  m_Name: Enemy 1
+  m_Name: Enemy (crab)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -361,10 +361,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78732c90826f649f1bfcb9b168b6bd94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
-  _speed: 5
+  _accelerationSmoothness: 10
+  _speed: 2
   _angularSpeed: 60
   _rigidbody: {fileID: 8984800078275334740}
-  _distanceToCarry: 20
+  _distanceToCarry: 30
 --- !u!1 &1815819496354696735
 GameObject:
   m_ObjectHideFlags: 0

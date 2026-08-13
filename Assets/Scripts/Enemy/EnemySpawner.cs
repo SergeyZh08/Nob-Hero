@@ -7,7 +7,8 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private EnemyVisualProvider _enemyVisualProvider;
-    [SerializeField] private float _radiusForSpawn;
+    [SerializeField] private float _radiusForSpawnInside = 20f;
+    [SerializeField] private float _radiusForSpawnOutside = 30f;
     [Header("Enemy Pool")]
     [SerializeField] private int _startSize;
     [SerializeField] private int _step;
@@ -38,16 +39,13 @@ public class EnemySpawner : MonoBehaviour
     {
         StopAllCoroutines();
 
-        _currentWave ++;
+        _currentWave++;
 
         if (_currentWave >= _currentChapter.EnemyWaves[0].NumberPerSecund.Length)
         {
             _lastWave = true;
-            //Debug.Log("true" + _currentWave);
             return;
         }
-
-        //Debug.Log("false:" + _currentWave);
 
         for (int i = 0; i < _currentChapter.EnemyWaves.Length; i++)
         {
@@ -81,6 +79,7 @@ public class EnemySpawner : MonoBehaviour
     {
         Vector2 randomVector = UnityEngine.Random.insideUnitCircle.normalized;
 
+        float _radiusForSpawn = UnityEngine.Random.Range(_radiusForSpawnInside, _radiusForSpawnOutside);
         Vector3 position = _player.position + new Vector3(randomVector.x, 0, randomVector.y) * _radiusForSpawn;
 
         Enemy newEnemy = _pools[enemyPrefab].Get(e => e.transform.position = position);
@@ -112,11 +111,13 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    // private void OnDrawGizmos()
-    // {
-    //     Handles.color = Color.coral;
-    //     Handles.DrawWireDisc(_player.position, Vector3.up, _radiusForSpawn);
-    // }
+    private void OnDrawGizmos()
+    {
+        Player player = FindFirstObjectByType<Player>();
+        Handles.color = Color.coral;
+        Handles.DrawWireDisc(player.transform.position, Vector3.up, _radiusForSpawnInside);
+        Handles.DrawWireDisc(player.transform.position, Vector3.up, _radiusForSpawnOutside);
+    }
 
     public Enemy[] GetClosest(Vector3 point, int count)
     {
