@@ -77,10 +77,10 @@ public class EnemySpawner : MonoBehaviour
 
     private void SpawnAndInit(Enemy enemyPrefab)
     {
-        Vector2 randomVector = UnityEngine.Random.insideUnitCircle.normalized;
+        Vector3 direction = Quaternion.Euler(0f, UnityEngine.Random.Range(-30f, 30f), 0f) * _player.transform.forward;
 
         float _radiusForSpawn = UnityEngine.Random.Range(_radiusForSpawnInside, _radiusForSpawnOutside);
-        Vector3 position = _player.position + new Vector3(randomVector.x, 0, randomVector.y) * _radiusForSpawn;
+        Vector3 position = _player.position + direction * _radiusForSpawn;
 
         Enemy newEnemy = _pools[enemyPrefab].Get(e => e.transform.position = position);
         _enemyToPool[newEnemy] = _pools[enemyPrefab];
@@ -90,6 +90,7 @@ public class EnemySpawner : MonoBehaviour
         newEnemy.OnEnemyDie += RemoveEnemy;
 
         newEnemy.Movement.SetTarget(_player);
+        newEnemy.Health.SetHealth(1f + _currentWave / 10f);
         _spawnedEnemies.Add(newEnemy);
     }
 
@@ -111,7 +112,7 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmos()
+    private void OnDrawGizmosSelected()
     {
         Player player = FindFirstObjectByType<Player>();
         Handles.color = Color.coral;

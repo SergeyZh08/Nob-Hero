@@ -15,11 +15,11 @@ MonoBehaviour:
   EnemyWaves:
   - Enemy: {fileID: 8958729516352189406, guid: c1994222cdd364596b580dc735cb4a9d, type: 3}
     NumberPerSecund:
-    - 10
-    - 10
-    - 10
+    - 1
+    - 1
+    - 1
   - Enemy: {fileID: 8710286029589797408, guid: aa3b5e43ed11e46c9ac2eee9abd75a1c, type: 3}
     NumberPerSecund:
-    - 10
-    - 10
-    - 10
+    - 1
+    - 1
+    - 1

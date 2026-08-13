@@ -69,7 +69,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinLoot
   _collider: {fileID: 1185702274302182001}
-  _coinCount: 10
+  _coinCount: 1
 --- !u!114 &-1504009098689014082
 MonoBehaviour:
   m_ObjectHideFlags: 0

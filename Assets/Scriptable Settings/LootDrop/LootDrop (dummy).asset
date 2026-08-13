@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74a23a9e961444deaa40c02752604397, type: 3}
-  m_Name: LootDrop
+  m_Name: LootDrop (dummy)
   m_EditorClassIdentifier: Assembly-CSharp::LootDrop
   Items:
   - Loot: {fileID: 64881965670658270, guid: d5ab6713f56d34d259253f81bdbd5522, type: 3}
     Weight: 80
   - Loot: {fileID: 6564055667085065529, guid: ca43b9f32687c426bb33665838742b25, type: 3}
-    Weight: 10
+    Weight: 5
   - Loot: {fileID: 636344318880742050, guid: e428679e755264b448a6a728baa0c386, type: 3}
-    Weight: 10
+    Weight: 15

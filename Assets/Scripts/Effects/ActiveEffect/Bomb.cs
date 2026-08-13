@@ -12,9 +12,8 @@ public class Bomb : MonoBehaviour, IPoolable
     private bool _isActivated = false;
     private float _timer = 0;
     private Action<Bomb> _release;
-    // переделать под общую систему
+    // убрать с класса
     [SerializeField] private ParticleSystem _explosion;
-    [SerializeField] private GameObject[] _visual;
 
     public void Init(float radius, float damage, float lifeTime, Action<Bomb> action)
     {
@@ -60,30 +59,11 @@ public class Bomb : MonoBehaviour, IPoolable
                 }
             }
 
-            // переделать под общую систему
-            StartCoroutine(DieProcess());
+            //убрать instantiate
+            ParticleSystem explosion = Instantiate(_explosion, transform.position, Quaternion.identity);
+            explosion.Play();
+            Die();
         }
-    }
-
-    // переделать под общую систему
-    private IEnumerator DieProcess()
-    {
-        ParticleSystem system = Instantiate(_explosion, transform.position, Quaternion.identity);
-        system.Play();
-
-        for (int i = 0; i < _visual.Length; i++)
-        {
-            _visual[i].gameObject.SetActive(false);
-        }
-
-        yield return new WaitForSeconds(_explosion.main.duration);
-
-        for (int i = 0; i < _visual.Length; i++)
-        {
-            _visual[i].gameObject.SetActive(true);
-        }
-
-        Die();
     }
 
     private void Die()

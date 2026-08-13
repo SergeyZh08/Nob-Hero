@@ -69,7 +69,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthLoot
   _collider: {fileID: 5371667454146319718}
-  _healthCount: 10
+  _healthCount: 3
 --- !u!114 &-6254897117849432138
 MonoBehaviour:
   m_ObjectHideFlags: 0

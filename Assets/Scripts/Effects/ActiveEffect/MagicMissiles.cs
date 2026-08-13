@@ -3,11 +3,15 @@ using UnityEngine;
 
 public class MagicMissiles : MonoBehaviour, IPoolable
 {
+    [SerializeField] private ParticleSystem _explosion;
+    [SerializeField] private LayerMask _layerMask;
+    private Collider[] _colliders = new Collider[25];
     private float _speed;
     private float _damage;
     private Enemy _enemy;
     private Action<MagicMissiles> _release;
     private bool _isDead = false;
+    private float _radius = 0.5f;
 
     public void Init(float speed, float damage, Enemy enemy, Action<MagicMissiles> action)
     {
@@ -25,13 +29,30 @@ public class MagicMissiles : MonoBehaviour, IPoolable
 
             if (transform.position == _enemy.transform.position)
             {
-                _enemy.TakeDamage(_damage);
+                TakeDamage();
                 Die();
             }
         }
         else
         {
             Die();
+        }
+    }
+
+    private void TakeDamage()
+    {
+        //убрать instantiate
+        ParticleSystem explosion = Instantiate(_explosion, transform.position, Quaternion.identity);
+        explosion.Play();
+
+        int len = Physics.OverlapSphereNonAlloc(transform.position, _radius, _colliders, _layerMask, QueryTriggerInteraction.Ignore);
+
+        for (int i = 0; i < len; i++)
+        {
+            if (_colliders[i].TryGetComponent(out Enemy enemy))
+            {
+                enemy.TakeDamage(_damage);
+            }
         }
     }
 
