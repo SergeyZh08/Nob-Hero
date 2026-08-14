@@ -17,81 +17,81 @@ MonoBehaviour:
   Sprite: {fileID: 21300000, guid: 3928010dde5e34ecfa63a27a7b78ddec, type: 3}
   Level: 0
   _level:
-  - Cooldown: 4
+  - Cooldown: 7
     Damage: 10
+    Radius: 1
+    Number: 0
+    DPS: 0
+    PassCount: 0
+    LifeTime: 0
+    Speed: 0
+  - Cooldown: 7
+    Damage: 15
+    Radius: 1.25
+    Number: 0
+    DPS: 0
+    PassCount: 0
+    LifeTime: 0
+    Speed: 0
+  - Cooldown: 6.5
+    Damage: 15
+    Radius: 1.25
+    Number: 0
+    DPS: 0
+    PassCount: 0
+    LifeTime: 0
+    Speed: 0
+  - Cooldown: 6.5
+    Damage: 20
+    Radius: 1.5
+    Number: 0
+    DPS: 0
+    PassCount: 0
+    LifeTime: 0
+    Speed: 0
+  - Cooldown: 6
+    Damage: 20
+    Radius: 1.5
+    Number: 0
+    DPS: 0
+    PassCount: 0
+    LifeTime: 0
+    Speed: 0
+  - Cooldown: 6
+    Damage: 25
+    Radius: 1.75
+    Number: 0
+    DPS: 0
+    PassCount: 0
+    LifeTime: 0
+    Speed: 0
+  - Cooldown: 5.5
+    Damage: 25
+    Radius: 1.75
+    Number: 0
+    DPS: 0
+    PassCount: 0
+    LifeTime: 0
+    Speed: 0
+  - Cooldown: 5.5
+    Damage: 30
     Radius: 2
     Number: 0
     DPS: 0
     PassCount: 0
     LifeTime: 0
     Speed: 0
-  - Cooldown: 4
-    Damage: 10
-    Radius: 3
+  - Cooldown: 5
+    Damage: 30
+    Radius: 2.25
     Number: 0
     DPS: 0
     PassCount: 0
     LifeTime: 0
     Speed: 0
-  - Cooldown: 0
-    Damage: 0
-    Radius: 0
-    Number: 0
-    DPS: 0
-    PassCount: 0
-    LifeTime: 0
-    Speed: 0
-  - Cooldown: 0
-    Damage: 0
-    Radius: 0
-    Number: 0
-    DPS: 0
-    PassCount: 0
-    LifeTime: 0
-    Speed: 0
-  - Cooldown: 0
-    Damage: 0
-    Radius: 0
-    Number: 0
-    DPS: 0
-    PassCount: 0
-    LifeTime: 0
-    Speed: 0
-  - Cooldown: 0
-    Damage: 0
-    Radius: 0
-    Number: 0
-    DPS: 0
-    PassCount: 0
-    LifeTime: 0
-    Speed: 0
-  - Cooldown: 0
-    Damage: 0
-    Radius: 0
-    Number: 0
-    DPS: 0
-    PassCount: 0
-    LifeTime: 0
-    Speed: 0
-  - Cooldown: 0
-    Damage: 0
-    Radius: 0
-    Number: 0
-    DPS: 0
-    PassCount: 0
-    LifeTime: 0
-    Speed: 0
-  - Cooldown: 0
-    Damage: 0
-    Radius: 0
-    Number: 0
-    DPS: 0
-    PassCount: 0
-    LifeTime: 0
-    Speed: 0
-  - Cooldown: 0
-    Damage: 0
-    Radius: 0
+  - Cooldown: 5
+    Damage: 35
+    Radius: 2.5
     Number: 0
     DPS: 0
     PassCount: 0

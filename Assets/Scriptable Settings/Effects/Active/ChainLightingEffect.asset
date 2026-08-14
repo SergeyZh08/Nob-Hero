@@ -17,84 +17,84 @@ MonoBehaviour:
   Sprite: {fileID: 21300000, guid: e2ecf175d40a945fbb7b4de14d9e776d, type: 3}
   Level: 0
   _level:
-  - Cooldown: 3
-    Damage: 5
+  - Cooldown: 5
+    Damage: 10
     Radius: 0
     Number: 1
     DPS: 0
     PassCount: 2
     LifeTime: 0
-    Speed: 8
-  - Cooldown: 3
-    Damage: 6
+    Speed: 5
+  - Cooldown: 5
+    Damage: 12
     Radius: 0
     Number: 2
     DPS: 0
     PassCount: 3
     LifeTime: 0
+    Speed: 5
+  - Cooldown: 4.5
+    Damage: 14
+    Radius: 0
+    Number: 2
+    DPS: 0
+    PassCount: 4
+    LifeTime: 0
+    Speed: 5
+  - Cooldown: 4.5
+    Damage: 14
+    Radius: 0
+    Number: 3
+    DPS: 0
+    PassCount: 5
+    LifeTime: 0
+    Speed: 6
+  - Cooldown: 4
+    Damage: 15
+    Radius: 0
+    Number: 3
+    DPS: 0
+    PassCount: 5
+    LifeTime: 0
+    Speed: 6
+  - Cooldown: 4
+    Damage: 15
+    Radius: 0
+    Number: 4
+    DPS: 0
+    PassCount: 5
+    LifeTime: 0
+    Speed: 6
+  - Cooldown: 3.5
+    Damage: 20
+    Radius: 0
+    Number: 4
+    DPS: 0
+    PassCount: 6
+    LifeTime: 0
+    Speed: 7
+  - Cooldown: 3.5
+    Damage: 20
+    Radius: 0
+    Number: 5
+    DPS: 0
+    PassCount: 6
+    LifeTime: 0
+    Speed: 7
+  - Cooldown: 3
+    Damage: 25
+    Radius: 0
+    Number: 5
+    DPS: 0
+    PassCount: 7
+    LifeTime: 0
+    Speed: 7
+  - Cooldown: 3
+    Damage: 25
+    Radius: 0
+    Number: 6
+    DPS: 0
+    PassCount: 8
+    LifeTime: 0
     Speed: 8
-  - Cooldown: 0
-    Damage: 0
-    Radius: 0
-    Number: 0
-    DPS: 0
-    PassCount: 0
-    LifeTime: 0
-    Speed: 0
-  - Cooldown: 0
-    Damage: 0
-    Radius: 0
-    Number: 0
-    DPS: 0
-    PassCount: 0
-    LifeTime: 0
-    Speed: 0
-  - Cooldown: 0
-    Damage: 0
-    Radius: 0
-    Number: 0
-    DPS: 0
-    PassCount: 0
-    LifeTime: 0
-    Speed: 0
-  - Cooldown: 0
-    Damage: 0
-    Radius: 0
-    Number: 0
-    DPS: 0
-    PassCount: 0
-    LifeTime: 0
-    Speed: 0
-  - Cooldown: 0
-    Damage: 0
-    Radius: 0
-    Number: 0
-    DPS: 0
-    PassCount: 0
-    LifeTime: 0
-    Speed: 0
-  - Cooldown: 0
-    Damage: 0
-    Radius: 0
-    Number: 0
-    DPS: 0
-    PassCount: 0
-    LifeTime: 0
-    Speed: 0
-  - Cooldown: 0
-    Damage: 0
-    Radius: 0
-    Number: 0
-    DPS: 0
-    PassCount: 0
-    LifeTime: 0
-    Speed: 0
-  - Cooldown: 0
-    Damage: 0
-    Radius: 0
-    Number: 0
-    DPS: 0
-    PassCount: 0
-    LifeTime: 0
-    Speed: 0
   _chainLightingPrefab: {fileID: 3725238828295039714, guid: 5cd31db3786944107bebe568b965a1cf, type: 3}

@@ -17,84 +17,84 @@ MonoBehaviour:
   Sprite: {fileID: 21300000, guid: 5a5fa30f5186b446e8b4562a4401651c, type: 3}
   Level: 0
   _level:
-  - Cooldown: 1
+  - Cooldown: 5
     Damage: 2
+    Radius: 0
+    Number: 8
+    DPS: 0
+    PassCount: 5
+    LifeTime: 0
+    Speed: 180
+  - Cooldown: 5
+    Damage: 3
+    Radius: 0
+    Number: 10
+    DPS: 0
+    PassCount: 7
+    LifeTime: 0
+    Speed: 180
+  - Cooldown: 4.5
+    Damage: 4
+    Radius: 0
+    Number: 10
+    DPS: 0
+    PassCount: 7
+    LifeTime: 0
+    Speed: 180
+  - Cooldown: 4.5
+    Damage: 5
     Radius: 0
     Number: 12
     DPS: 0
-    PassCount: 30
-    LifeTime: 0
-    Speed: 180
-  - Cooldown: 3
-    Damage: 2.5
-    Radius: 0
-    Number: 9
-    DPS: 0
-    PassCount: 8
+    PassCount: 9
     LifeTime: 0
     Speed: 270
-  - Cooldown: 0
-    Damage: 0
+  - Cooldown: 4
+    Damage: 7
     Radius: 0
-    Number: 0
+    Number: 12
     DPS: 0
-    PassCount: 0
+    PassCount: 10
     LifeTime: 0
-    Speed: 0
-  - Cooldown: 0
-    Damage: 0
+    Speed: 270
+  - Cooldown: 4
+    Damage: 9
     Radius: 0
-    Number: 0
+    Number: 14
     DPS: 0
-    PassCount: 0
+    PassCount: 10
     LifeTime: 0
-    Speed: 0
-  - Cooldown: 0
-    Damage: 0
+    Speed: 360
+  - Cooldown: 4
+    Damage: 11
     Radius: 0
-    Number: 0
+    Number: 18
     DPS: 0
-    PassCount: 0
+    PassCount: 12
     LifeTime: 0
-    Speed: 0
-  - Cooldown: 0
-    Damage: 0
+    Speed: 360
+  - Cooldown: 3.5
+    Damage: 13
     Radius: 0
-    Number: 0
+    Number: 20
     DPS: 0
-    PassCount: 0
+    PassCount: 12
     LifeTime: 0
-    Speed: 0
-  - Cooldown: 0
-    Damage: 0
+    Speed: 420
+  - Cooldown: 3
+    Damage: 15
     Radius: 0
-    Number: 0
+    Number: 22
     DPS: 0
-    PassCount: 0
+    PassCount: 12
     LifeTime: 0
-    Speed: 0
-  - Cooldown: 0
-    Damage: 0
+    Speed: 420
+  - Cooldown: 3
+    Damage: 16
     Radius: 0
-    Number: 0
+    Number: 24
     DPS: 0
-    PassCount: 0
+    PassCount: 12
     LifeTime: 0
-    Speed: 0
-  - Cooldown: 0
-    Damage: 0
-    Radius: 0
-    Number: 0
-    DPS: 0
-    PassCount: 0
-    LifeTime: 0
-    Speed: 0
-  - Cooldown: 0
-    Damage: 0
-    Radius: 0
-    Number: 0
-    DPS: 0
-    PassCount: 0
-    LifeTime: 0
-    Speed: 0
+    Speed: 420
   _knifePrefab: {fileID: 7167914001272121078, guid: 947597283ca094a6c89a964e763f87a4, type: 3}

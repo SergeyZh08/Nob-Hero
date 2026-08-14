@@ -21,79 +21,79 @@ MonoBehaviour:
     Damage: 0
     Radius: 1
     Number: 0
-    DPS: 1
+    DPS: 3
     PassCount: 0
     LifeTime: 0
     Speed: 0
   - Cooldown: 0
     Damage: 0
-    Radius: 2
+    Radius: 1
     Number: 0
-    DPS: 2
+    DPS: 4
     PassCount: 0
     LifeTime: 0
     Speed: 0
   - Cooldown: 0
     Damage: 0
-    Radius: 0
+    Radius: 1
     Number: 0
-    DPS: 0
+    DPS: 5
     PassCount: 0
     LifeTime: 0
     Speed: 0
   - Cooldown: 0
     Damage: 0
-    Radius: 0
+    Radius: 1.25
     Number: 0
-    DPS: 0
+    DPS: 6
     PassCount: 0
     LifeTime: 0
     Speed: 0
   - Cooldown: 0
     Damage: 0
-    Radius: 0
+    Radius: 1.25
     Number: 0
-    DPS: 0
+    DPS: 7
     PassCount: 0
     LifeTime: 0
     Speed: 0
   - Cooldown: 0
     Damage: 0
-    Radius: 0
+    Radius: 1.5
     Number: 0
-    DPS: 0
+    DPS: 8
     PassCount: 0
     LifeTime: 0
     Speed: 0
   - Cooldown: 0
     Damage: 0
-    Radius: 0
+    Radius: 1.5
     Number: 0
-    DPS: 0
+    DPS: 9
     PassCount: 0
     LifeTime: 0
     Speed: 0
   - Cooldown: 0
     Damage: 0
-    Radius: 0
+    Radius: 1.5
     Number: 0
-    DPS: 0
+    DPS: 9
     PassCount: 0
     LifeTime: 0
     Speed: 0
   - Cooldown: 0
     Damage: 0
-    Radius: 0
+    Radius: 1.75
     Number: 0
-    DPS: 0
+    DPS: 9
     PassCount: 0
     LifeTime: 0
     Speed: 0
   - Cooldown: 0
     Damage: 0
-    Radius: 0
+    Radius: 1.75
     Number: 0
-    DPS: 0
+    DPS: 10
     PassCount: 0
     LifeTime: 0
     Speed: 0

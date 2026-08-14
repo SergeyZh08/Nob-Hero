@@ -17,84 +17,84 @@ MonoBehaviour:
   Sprite: {fileID: 21300000, guid: 9e3daf99c11764113b66cafc70ff6f50, type: 3}
   Level: 0
   _level:
-  - Cooldown: 3
-    Damage: 5
+  - Cooldown: 5
+    Damage: 10
     Radius: 0
     Number: 3
     DPS: 0
-    PassCount: 4
+    PassCount: 5
     LifeTime: 5
     Speed: 10
-  - Cooldown: 3
-    Damage: 5
+  - Cooldown: 5
+    Damage: 10
     Radius: 0
     Number: 4
     DPS: 0
     PassCount: 5
     LifeTime: 5
     Speed: 10
-  - Cooldown: 3
-    Damage: 5
+  - Cooldown: 4.5
+    Damage: 10
+    Radius: 0
+    Number: 4
+    DPS: 0
+    PassCount: 6
+    LifeTime: 5
+    Speed: 10
+  - Cooldown: 4.5
+    Damage: 11
     Radius: 0
     Number: 5
     DPS: 0
     PassCount: 6
     LifeTime: 5
     Speed: 10
-  - Cooldown: 3
-    Damage: 5
+  - Cooldown: 4
+    Damage: 13
+    Radius: 0
+    Number: 5
+    DPS: 0
+    PassCount: 7
+    LifeTime: 5
+    Speed: 10
+  - Cooldown: 4
+    Damage: 15
     Radius: 0
     Number: 6
     DPS: 0
-    PassCount: 6
+    PassCount: 7
     LifeTime: 5
     Speed: 10
-  - Cooldown: 0
-    Damage: 0
+  - Cooldown: 3.5
+    Damage: 17
     Radius: 0
-    Number: 0
+    Number: 6
     DPS: 0
-    PassCount: 0
-    LifeTime: 0
-    Speed: 0
-  - Cooldown: 0
-    Damage: 0
+    PassCount: 8
+    LifeTime: 5
+    Speed: 10
+  - Cooldown: 3.5
+    Damage: 19
     Radius: 0
-    Number: 0
+    Number: 7
     DPS: 0
-    PassCount: 0
-    LifeTime: 0
-    Speed: 0
-  - Cooldown: 0
-    Damage: 0
+    PassCount: 8
+    LifeTime: 5
+    Speed: 10
+  - Cooldown: 3
+    Damage: 19
     Radius: 0
-    Number: 0
+    Number: 7
     DPS: 0
-    PassCount: 0
-    LifeTime: 0
-    Speed: 0
-  - Cooldown: 0
-    Damage: 0
+    PassCount: 9
+    LifeTime: 5
+    Speed: 10
+  - Cooldown: 3
+    Damage: 20
     Radius: 0
-    Number: 0
+    Number: 7
     DPS: 0
-    PassCount: 0
-    LifeTime: 0
-    Speed: 0
-  - Cooldown: 0
-    Damage: 0
-    Radius: 0
-    Number: 0
-    DPS: 0
-    PassCount: 0
-    LifeTime: 0
-    Speed: 0
-  - Cooldown: 0
-    Damage: 0
-    Radius: 0
-    Number: 0
-    DPS: 0
-    PassCount: 0
-    LifeTime: 0
-    Speed: 0
+    PassCount: 10
+    LifeTime: 5
+    Speed: 10
   _shadowMissilesPrefab: {fileID: 2514856520707238342, guid: 9085a424814f54c9caee658fe506b13c, type: 3}
