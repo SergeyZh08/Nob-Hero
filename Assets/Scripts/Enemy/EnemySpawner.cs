@@ -24,6 +24,7 @@ public class EnemySpawner : MonoBehaviour
     public event Action AllEnemiesDie;
     private bool _lastWave;
     private int _currentWave;
+    [SerializeField] private int _maxEnemies = 150;
 
     public void Init(LootManager lootManager, Player player, ChapterManager waweManager)
     {
@@ -77,6 +78,11 @@ public class EnemySpawner : MonoBehaviour
 
     private void SpawnAndInit(Enemy enemyPrefab)
     {
+        if (_spawnedEnemies.Count > _maxEnemies)
+        {
+            return;
+        }
+            
         Vector3 direction = Quaternion.Euler(0f, UnityEngine.Random.Range(-30f, 30f), 0f) * _player.transform.forward;
 
         float _radiusForSpawn = UnityEngine.Random.Range(_radiusForSpawnInside, _radiusForSpawnOutside);
@@ -90,7 +96,7 @@ public class EnemySpawner : MonoBehaviour
         newEnemy.OnEnemyDie += RemoveEnemy;
 
         newEnemy.Movement.SetTarget(_player);
-        newEnemy.Health.SetHealth(1f + _currentWave / 10f);
+        newEnemy.Health.SetHealth(1f + _currentWave / 20f);
         _spawnedEnemies.Add(newEnemy);
     }
 

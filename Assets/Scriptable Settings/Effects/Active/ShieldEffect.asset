@@ -17,7 +17,7 @@ MonoBehaviour:
   Sprite: {fileID: 21300000, guid: ba1e3eef9afdf4934863c77701277d8a, type: 3}
   Level: 0
   _level:
-  - Cooldown: 15
+  - Cooldown: 10
     Damage: 0
     Radius: 0
     Number: 0
@@ -25,7 +25,7 @@ MonoBehaviour:
     PassCount: 0
     LifeTime: 3
     Speed: 0
-  - Cooldown: 14
+  - Cooldown: 9.5
     Damage: 0
     Radius: 0
     Number: 0
@@ -33,68 +33,68 @@ MonoBehaviour:
     PassCount: 0
     LifeTime: 3
     Speed: 0
-  - Cooldown: 13
+  - Cooldown: 9
     Damage: 0
     Radius: 0
     Number: 0
     DPS: 0
     PassCount: 0
-    LifeTime: 3.5
+    LifeTime: 3
     Speed: 0
-  - Cooldown: 12.5
+  - Cooldown: 8.5
     Damage: 0
     Radius: 0
     Number: 0
     DPS: 0
     PassCount: 0
-    LifeTime: 3.5
+    LifeTime: 3
     Speed: 0
-  - Cooldown: 12
+  - Cooldown: 8
     Damage: 0
     Radius: 0
     Number: 0
     DPS: 0
     PassCount: 0
-    LifeTime: 4
+    LifeTime: 3
     Speed: 0
-  - Cooldown: 11.5
+  - Cooldown: 7.5
     Damage: 0
     Radius: 0
     Number: 0
     DPS: 0
     PassCount: 0
-    LifeTime: 4
+    LifeTime: 3
     Speed: 0
-  - Cooldown: 11
+  - Cooldown: 7
     Damage: 0
     Radius: 0
     Number: 0
     DPS: 0
     PassCount: 0
-    LifeTime: 4.5
+    LifeTime: 3
     Speed: 0
-  - Cooldown: 10.5
+  - Cooldown: 6.5
     Damage: 0
     Radius: 0
     Number: 0
     DPS: 0
     PassCount: 0
-    LifeTime: 4.5
+    LifeTime: 3
     Speed: 0
-  - Cooldown: 10
+  - Cooldown: 6
     Damage: 0
     Radius: 0
     Number: 0
     DPS: 0
     PassCount: 0
-    LifeTime: 4.5
+    LifeTime: 3
     Speed: 0
-  - Cooldown: 10
+  - Cooldown: 5.5
     Damage: 0
     Radius: 0
     Number: 0
     DPS: 0
     PassCount: 0
-    LifeTime: 5
+    LifeTime: 3
     Speed: 0
   _shieldPrefab: {fileID: 7498058346443370942, guid: 9d651b2b32d834623b2aedfd79dc2cff, type: 3}

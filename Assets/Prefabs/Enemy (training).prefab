@@ -231,6 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   _startHealth: 50
+  _needBoost: 1
 --- !u!114 &1726970466714848245
 MonoBehaviour:
   m_ObjectHideFlags: 0

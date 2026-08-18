@@ -16,6 +16,6 @@ MonoBehaviour:
   - Loot: {fileID: 64881965670658270, guid: d5ab6713f56d34d259253f81bdbd5522, type: 3}
     Weight: 70
   - Loot: {fileID: 6564055667085065529, guid: ca43b9f32687c426bb33665838742b25, type: 3}
-    Weight: 5
+    Weight: 3
   - Loot: {fileID: 636344318880742050, guid: e428679e755264b448a6a728baa0c386, type: 3}
-    Weight: 25
+    Weight: 27

@@ -17,84 +17,84 @@ MonoBehaviour:
   Sprite: {fileID: 21300000, guid: accdd6a62dfe14ac88a05f3c21e15314, type: 3}
   Level: 0
   _level:
-  - Cooldown: 9
+  - Cooldown: 8
     Damage: 0
     Radius: 2
     Number: 0
-    DPS: 2
+    DPS: 4
     PassCount: 0
     LifeTime: 3
     Speed: 0
-  - Cooldown: 9
+  - Cooldown: 7.5
     Damage: 0
     Radius: 2
     Number: 0
-    DPS: 2
+    DPS: 5
     PassCount: 0
     LifeTime: 3
     Speed: 0
-  - Cooldown: 8
-    Damage: 0
-    Radius: 2.5
-    Number: 0
-    DPS: 4
-    PassCount: 0
-    LifeTime: 3.5
-    Speed: 0
-  - Cooldown: 8
-    Damage: 0
-    Radius: 2.5
-    Number: 0
-    DPS: 4
-    PassCount: 0
-    LifeTime: 3.5
-    Speed: 0
-  - Cooldown: 8
+  - Cooldown: 7
     Damage: 0
     Radius: 2.5
     Number: 0
     DPS: 6
     PassCount: 0
-    LifeTime: 3.5
+    LifeTime: 3.25
     Speed: 0
-  - Cooldown: 8
+  - Cooldown: 6.5
     Damage: 0
     Radius: 2.5
     Number: 0
     DPS: 6
     PassCount: 0
-    LifeTime: 4
+    LifeTime: 3.25
     Speed: 0
-  - Cooldown: 7.5
+  - Cooldown: 6
     Damage: 0
-    Radius: 3
+    Radius: 2.5
     Number: 0
     DPS: 7
     PassCount: 0
-    LifeTime: 4
+    LifeTime: 3.5
     Speed: 0
-  - Cooldown: 7.5
+  - Cooldown: 5.5
     Damage: 0
-    Radius: 3
+    Radius: 2.5
     Number: 0
     DPS: 7
     PassCount: 0
+    LifeTime: 3.5
+    Speed: 0
+  - Cooldown: 5
+    Damage: 0
+    Radius: 3
+    Number: 0
+    DPS: 9
+    PassCount: 0
+    LifeTime: 3.75
+    Speed: 0
+  - Cooldown: 5
+    Damage: 0
+    Radius: 3
+    Number: 0
+    DPS: 9
+    PassCount: 0
+    LifeTime: 3.75
+    Speed: 0
+  - Cooldown: 5
+    Damage: 0
+    Radius: 3
+    Number: 0
+    DPS: 12
+    PassCount: 0
     LifeTime: 4
     Speed: 0
-  - Cooldown: 7.5
+  - Cooldown: 5
     Damage: 0
     Radius: 3
     Number: 0
-    DPS: 8
+    DPS: 12
     PassCount: 0
-    LifeTime: 4.5
-    Speed: 0
-  - Cooldown: 7.5
-    Damage: 0
-    Radius: 3
-    Number: 0
-    DPS: 8
-    PassCount: 0
-    LifeTime: 4.5
+    LifeTime: 4
     Speed: 0
   _blackHolePrefab: {fileID: 2451711593897802880, guid: 4a76cf66899fd41b9ba24aa0404c4217, type: 3}

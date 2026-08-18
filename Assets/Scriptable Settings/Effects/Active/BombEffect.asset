@@ -17,81 +17,81 @@ MonoBehaviour:
   Sprite: {fileID: 21300000, guid: 820e42e6fcdaa474fa44913f66cda166, type: 3}
   Level: 0
   _level:
-  - Cooldown: 10
+  - Cooldown: 5
     Damage: 10
-    Radius: 1.5
+    Radius: 2
     Number: 0
     DPS: 0
     PassCount: 0
     LifeTime: 5
     Speed: 0
-  - Cooldown: 10
+  - Cooldown: 4.5
     Damage: 15
-    Radius: 1.5
+    Radius: 2
     Number: 0
     DPS: 0
     PassCount: 0
     LifeTime: 5
     Speed: 0
-  - Cooldown: 10
+  - Cooldown: 4.5
     Damage: 20
-    Radius: 2
-    Number: 0
-    DPS: 0
-    PassCount: 0
-    LifeTime: 5
-    Speed: 0
-  - Cooldown: 9.5
-    Damage: 20
-    Radius: 2
-    Number: 0
-    DPS: 0
-    PassCount: 0
-    LifeTime: 5
-    Speed: 0
-  - Cooldown: 9.5
-    Damage: 25
-    Radius: 2
-    Number: 0
-    DPS: 0
-    PassCount: 0
-    LifeTime: 5
-    Speed: 0
-  - Cooldown: 9
-    Damage: 25
     Radius: 2.5
+    Number: 0
+    DPS: 0
+    PassCount: 0
+    LifeTime: 5
+    Speed: 0
+  - Cooldown: 4
+    Damage: 20
+    Radius: 2.5
+    Number: 0
+    DPS: 0
+    PassCount: 0
+    LifeTime: 5
+    Speed: 0
+  - Cooldown: 4
+    Damage: 25
+    Radius: 3
+    Number: 0
+    DPS: 0
+    PassCount: 0
+    LifeTime: 5
+    Speed: 0
+  - Cooldown: 3.5
+    Damage: 25
+    Radius: 3
     Number: 0
     DPS: 0
     PassCount: 0
     LifeTime: 6
     Speed: 0
-  - Cooldown: 8.5
+  - Cooldown: 3.5
     Damage: 30
-    Radius: 2.5
+    Radius: 3.5
     Number: 0
     DPS: 0
     PassCount: 0
     LifeTime: 7
     Speed: 0
-  - Cooldown: 8
+  - Cooldown: 3.5
     Damage: 30
-    Radius: 2.5
+    Radius: 3.5
     Number: 0
     DPS: 0
     PassCount: 0
     LifeTime: 8
     Speed: 0
-  - Cooldown: 7.5
+  - Cooldown: 3
     Damage: 40
-    Radius: 2.5
+    Radius: 3.5
     Number: 0
     DPS: 0
     PassCount: 0
     LifeTime: 9
     Speed: 0
-  - Cooldown: 7
+  - Cooldown: 3
     Damage: 40
-    Radius: 2.5
+    Radius: 3.5
     Number: 0
     DPS: 0
     PassCount: 0

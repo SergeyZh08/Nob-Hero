@@ -584,6 +584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   _startHealth: 10
+  _needBoost: 0
 --- !u!114 &-402677099580147469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -652,6 +653,10 @@ PrefabInstance:
     - target: {fileID: 6765917506157113900, guid: 06d0c353705d184468955ad3c8c25874, type: 3}
       propertyPath: m_Name
       value: Target Dummy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6765917506168684350, guid: 06d0c353705d184468955ad3c8c25874, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

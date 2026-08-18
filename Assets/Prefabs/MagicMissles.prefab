@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b71f3aad481c4f6f87e18feb959562a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MagicMissles
-  _explosion: {fileID: 4991929801923851382}
+  _explosion: {fileID: 8785459169012095513, guid: a171ea31acfc3b84082ff4751074b85f, type: 3}
   _layerMask:
     serializedVersion: 2
     m_Bits: 256
@@ -171,11 +171,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a171ea31acfc3b84082ff4751074b85f, type: 3}
---- !u!198 &4991929801923851382 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 8785459169012095513, guid: a171ea31acfc3b84082ff4751074b85f, type: 3}
-  m_PrefabInstance: {fileID: 4371549542637727343}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5185824327264783098 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8889369654016025749, guid: a171ea31acfc3b84082ff4751074b85f, type: 3}

@@ -7,7 +7,7 @@ public class Nova : MonoBehaviour
     private float _damage;
     private float _radius;
     private Collider[] _enemies = new Collider[30];
-    private static readonly WaitForSeconds delay = new WaitForSeconds(3f);
+    private static readonly WaitForSeconds delay = new WaitForSeconds(1f);
     private Coroutine _currentCoroutine;
 
     public void Init(float damage, float radius, Vector3 position)

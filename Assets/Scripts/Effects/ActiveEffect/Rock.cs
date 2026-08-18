@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Rock : MonoBehaviour, IPoolable
 {
-    [SerializeField] private Transform _capsuleForDamage;
+    [SerializeField] private GameObject _capsuleForDamage;
     [SerializeField] private float _rockSpeed = 0.3f;
     static private readonly WaitForSeconds _delay = new WaitForSeconds(1.2f);
     private float _damage;
@@ -41,7 +41,7 @@ public class Rock : MonoBehaviour, IPoolable
         _passCount--;
         OnGrewUp?.Invoke(this, _passCount);
 
-        _capsuleForDamage.transform.localScale = Vector3.one;
+        _capsuleForDamage.gameObject.SetActive(false);
 
         yield return _delay;
 
@@ -56,7 +56,7 @@ public class Rock : MonoBehaviour, IPoolable
 
     public void OnGetFromPool()
     {
-        
+        _capsuleForDamage.gameObject.SetActive(true);
     }
 
     public void OnReleaseToPool()

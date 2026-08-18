@@ -5,6 +5,7 @@ public class EnemyHealth : MonoBehaviour
 {
     public Enemy Enemy {get; private set;}
     [SerializeField] private float _startHealth;
+    [SerializeField] private bool _needBoost = false;
     private float _health;
     public event Action<float> OnEnemyHit;
 
@@ -15,7 +16,7 @@ public class EnemyHealth : MonoBehaviour
 
     public void SetHealth(float healthMultiplier)
     {
-        _health = _startHealth * healthMultiplier;
+        _health = _needBoost ?_startHealth * healthMultiplier : _startHealth;
     }
 
     public void TakeDamage(float value)

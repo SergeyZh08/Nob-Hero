@@ -3077,7 +3077,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WaweManager
   _settings:
   - {fileID: 11400000, guid: 2c6528f511b004306ba04023508ed386, type: 2}
-  - {fileID: 11400000, guid: da9628a5ecff84f57bd1b306eb08a92a, type: 2}
+  - {fileID: 11400000, guid: 618112ca9c2a54b0c96052d423fb3e16, type: 2}
+  - {fileID: 11400000, guid: 6fb521574e4984b499432f82041aea2c, type: 2}
 --- !u!4 &566555671
 Transform:
   m_ObjectHideFlags: 0
@@ -4857,11 +4858,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: d438a863e753a4040a8c8e1b46d306d2, type: 3}
     - target: {fileID: 8152475456537471219, guid: d623ab8b6f8dab34c940d296f921fd2c, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 33.314835
+      value: 48.79599
       objectReference: {fileID: 0}
     - target: {fileID: 8152475456537471219, guid: d623ab8b6f8dab34c940d296f921fd2c, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 33.314835
+      value: 48.79599
       objectReference: {fileID: 0}
     - target: {fileID: 8196812612993696243, guid: d623ab8b6f8dab34c940d296f921fd2c, type: 3}
       propertyPath: m_Pivot.x
@@ -4953,11 +4954,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 0473c23a0a9cb764086dca6bc1895d13, type: 3}
     - target: {fileID: 8196812613576827625, guid: d623ab8b6f8dab34c940d296f921fd2c, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 119.408005
+      value: 174.89601
       objectReference: {fileID: 0}
     - target: {fileID: 8196812613576827625, guid: d623ab8b6f8dab34c940d296f921fd2c, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 119.408005
+      value: 174.89601
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7592,17 +7593,17 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 5
-      inSlope: 5.9
-      outSlope: 5.9
+      inSlope: 3.8
+      outSlope: 3.8
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 50
-      value: 300
-      inSlope: 5.9
-      outSlope: 5.9
+      time: 25
+      value: 100
+      inSlope: 3.8
+      outSlope: 3.8
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334

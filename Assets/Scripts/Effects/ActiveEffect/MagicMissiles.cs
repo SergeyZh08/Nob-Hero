@@ -11,7 +11,7 @@ public class MagicMissiles : MonoBehaviour, IPoolable
     private Enemy _enemy;
     private Action<MagicMissiles> _release;
     private bool _isDead = false;
-    private float _radius = 0.5f;
+    private float _radius = 1f;
 
     public void Init(float speed, float damage, Enemy enemy, Action<MagicMissiles> action)
     {
@@ -70,6 +70,7 @@ public class MagicMissiles : MonoBehaviour, IPoolable
     public void OnGetFromPool()
     {
         _isDead = false;
+        _explosion.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
     }
 
     public void OnReleaseToPool()
