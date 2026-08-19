@@ -48,10 +48,12 @@ public class Meteor : MonoBehaviour, IPoolable
         _release?.Invoke(this);
     }
 
+#if UNITY_EDITOR
     private void OnDrawGizmos()
     {
         Handles.DrawWireDisc(transform.position, Vector3.up, _radius);
     }
+#endif
 
     public void OnGetFromPool()
     {

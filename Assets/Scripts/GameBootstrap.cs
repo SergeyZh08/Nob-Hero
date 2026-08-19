@@ -17,6 +17,9 @@ public class GameBootstrap : MonoBehaviour
 
     private void Awake()
     {
+        #if UNITY_ANDROID || UNITY_IOS
+        Application.targetFrameRate = 60;
+        #endif
         _gameManager.Init(_gameStateManager, _enemySpawner, _player, _waweManager, _saveManager);
         _player.Init();
         _effectManager.Init(_enemySpawner, _cardManager, _topIconManager, _player);

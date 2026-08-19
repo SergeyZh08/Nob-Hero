@@ -610,6 +610,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7615476132019834144}
     m_Modifications:
+    - target: {fileID: 7153565290158788685, guid: a1f7bfe70f7f21d4c9613bfa012751c0, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7153565290161904987, guid: a1f7bfe70f7f21d4c9613bfa012751c0, type: 3}
       propertyPath: m_Name
       value: Training Dummy

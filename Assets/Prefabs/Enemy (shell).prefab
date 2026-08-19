@@ -348,6 +348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   _startHealth: 15
+  _needBoost: 0
 --- !u!114 &5215813007575683977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -609,6 +610,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6661287825291892461}
     m_Modifications:
+    - target: {fileID: 1540857387660183191, guid: 19733e9f226cb484da2a78534abf28f5, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1540857387673622455, guid: 19733e9f226cb484da2a78534abf28f5, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5

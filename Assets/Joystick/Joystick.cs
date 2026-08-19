@@ -59,6 +59,11 @@ public class Joystick : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    public void OnDrag(PointerEventData eventData)
+{
+    OnPressed(eventData.position);
+}
+
     void UpdateSize()
     {
         Vector2 backgroundSize = GetBackgroundSize();
@@ -87,40 +92,11 @@ public class Joystick : MonoBehaviour
             Hide();
     }
 
-    private int _fingerId = -1;
-
-    void Update()
-    {
-        UpdateSize();
-        if (!Application.isPlaying) {
-            
-            return;
-        }
-        
-        if (!IsPressed) return;
-
-        if (_inputType == InputType.Touch)
-        {
-            foreach (Touch touch in Input.touches)
-            {
-                if (touch.fingerId == _fingerId)
-                {
-                    OnPressed(touch.position);
-                }
-            }
-        }
-        else if (_inputType == InputType.Mouse)
-        {
-            OnPressed(Input.mousePosition);
-        }
-    }
-
     public void OnDown(PointerEventData eventData)
     {
         IsPressed = true;
         Show();
-        
-        _fingerId = eventData.pointerId;
+
         _backgroundTransform.position = eventData.position;
         EventOnDown.Invoke(eventData.position);
         // ����� �� ���� ����� � ������� �������� �� ������ �����
@@ -157,7 +133,6 @@ public class Joystick : MonoBehaviour
         IsPressed = false;
         Hide();
         Value = Vector2.zero;
-        _fingerId = -1;
         EventOnUp.Invoke(eventData.position);
 
     }

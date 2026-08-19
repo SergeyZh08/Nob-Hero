@@ -118,6 +118,7 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
+#if UNITY_EDITOR
     private void OnDrawGizmosSelected()
     {
         Player player = FindFirstObjectByType<Player>();
@@ -125,6 +126,7 @@ public class EnemySpawner : MonoBehaviour
         Handles.DrawWireDisc(player.transform.position, Vector3.up, _radiusForSpawnInside);
         Handles.DrawWireDisc(player.transform.position, Vector3.up, _radiusForSpawnOutside);
     }
+#endif
 
     public Enemy[] GetClosest(Vector3 point, int count)
     {
